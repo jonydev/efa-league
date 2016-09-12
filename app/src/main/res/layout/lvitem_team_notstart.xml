@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/rl_ivitem_race_bg"
+        android:layout_marginLeft="@dimen/lvitem_team_notstart_rl_ivitem_race_bg_maginleft"
+        android:layout_marginRight="@dimen/lvitem_team_notstart_rl_ivitem_race_bg_maginright"
+        android:layout_marginTop="@dimen/lvitem_team_notstart_rl_ivitem_race_bg_magintop"
+        android:layout_height="@dimen/lvitem_team_notstart_rl_ivitem_race_bg_height"
+        >
+
+        <LinearLayout
+            android:id="@+id/ll_left"
+            android:layout_width="@dimen/lvitem_team_notstart_ll_left_width"
+            android:layout_height="@dimen/lvitem_team_notstart_ll_left_height"
+            android:layout_marginLeft="@dimen/lvitem_team_notstart_ll_left_maginleft"
+            android:layout_marginTop="@dimen/lvitem_team_notstart_ll_left_magintop"
+            android:orientation="vertical"
+            >
+            <ImageView
+            android:id="@+id/iv_teamflag_left"
+            android:layout_width="@dimen/lvitem_team_notstart_iv_teamflag_left_width"
+            android:layout_height="@dimen/lvitem_team_notstart_iv_teamflag_left_height"
+                android:layout_gravity="center_horizontal"
+            android:src="@drawable/qiudui_logo"
+            />
+            <TextView
+                android:id="@+id/tv_team_name_left"
+                android:text="洪都"
+                android:textColor="#333333"
+                android:textSize="@dimen/lvitem_team_notstart_tv_team_name_left_textsize"
+                android:layout_marginTop="@dimen/lvitem_team_notstart_tv_team_name_left_magintop"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toRightOf="@+id/ll_left"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="10dp"
+            >
+            <ImageView
+                android:id="@+id/iv_teamcloth_left_top"
+                android:layout_width="@dimen/lvitem_team_notstart_iv_teamcloth_left_top_width"
+                android:layout_height="@dimen/lvitem_team_notstart_iv_teamcloth_left_top_height"
+                android:src="@drawable/qiudui_logo"
+                />
+
+            <ImageView
+                android:id="@+id/iv_teamcloth_left_bottom"
+                android:layout_width="@dimen/lvitem_team_notstart_iv_teamcloth_left_bottom_width"
+                android:layout_height="@dimen/lvitem_team_notstart_iv_teamcloth_left_bottom_height"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/qiudui_logo" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/lvitem_team_notstart_ll_notstart_width"
+            android:layout_marginTop="@dimen/lvitem_team_notstart_ll_notstart_magintop"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/tv_not_start_game"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="未开赛"
+                android:textColor="#ffffff"
+                android:gravity="center"
+                android:textSize="@dimen/lvitem_team_notstart_tv_not_start_game_textsize"
+                android:background="@drawable/tv_not_start_game_bg"
+                />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="@dimen/lvitem_team_textsize"
+                android:textColor="#999999"
+                />
+            <TextView
+                android:id="@+id/tv_detail_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/lvitem_team_textsize"
+                android:textColor="#999999"
+                android:gravity="center"
+                />
+            <TextView
+                android:id="@+id/tv_detail_place"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="@dimen/lvitem_team_textsize"
+                android:textColor="#999999"
+                />
+
+        </LinearLayout>
+
+        
+        <LinearLayout
+            android:id="@+id/ll_right"
+            android:layout_width="@dimen/lvitem_team_notstart_ll_left_width"
+            android:layout_height="@dimen/lvitem_team_notstart_ll_left_height"
+            android:layout_marginRight="@dimen/lvitem_team_notstart_ll_right_maginright"
+            android:layout_marginTop="@dimen/lvitem_team_notstart_ll_left_magintop"
+            android:layout_alignParentRight="true"
+            android:orientation="vertical"
+            >
+            <ImageView
+                android:id="@+id/iv_teamflag_right"
+                android:layout_width="@dimen/lvitem_team_notstart_iv_teamflag_left_width"
+                android:layout_height="@dimen/lvitem_team_notstart_iv_teamflag_left_height"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/qiudui_logo"
+                />
+            <TextView
+                android:id="@+id/tv_team_name_right"
+                android:text="洪都"
+                android:textColor="#333333"
+                android:textSize="@dimen/lvitem_team_notstart_tv_team_name_left_textsize"
+                android:layout_marginTop="@dimen/lvitem_team_notstart_tv_team_name_left_magintop"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/ll_right"
+            >
+            <ImageView
+                android:id="@+id/iv_teamcloth_right_top"
+                android:layout_width="@dimen/lvitem_team_notstart_iv_teamcloth_left_top_width"
+                android:layout_height="@dimen/lvitem_team_notstart_iv_teamcloth_left_top_height"
+                android:src="@drawable/qiudui_logo"
+                />
+
+            <ImageView
+                android:id="@+id/iv_teamcloth_right_bottom"
+                android:layout_width="@dimen/lvitem_team_notstart_iv_teamcloth_left_bottom_width"
+                android:layout_height="@dimen/lvitem_team_notstart_iv_teamcloth_left_bottom_height"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/qiudui_logo" />
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

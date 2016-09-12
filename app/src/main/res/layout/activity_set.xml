@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#eeeeee"
+    tools:context="com.apsoft.scfb.ui.SetActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_set_text_top_height"
+        android:text="设置"
+        android:textColor="#ffffff"
+        android:background="#CE0000"
+        android:textSize="@dimen/activity_set_text_top_textsize"
+        android:gravity="center"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="#ffffff"
+        android:layout_height="@dimen/activity_set_llheight">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/activity_set_textswrap_textsize"
+            android:layout_marginTop="@dimen/activity_set_textswrap_magintop"
+            android:layout_marginLeft="@dimen/activity_set_textswrap_maginleft"
+            android:text="清除缓存"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="120.MB"
+            android:textSize="@dimen/activity_set_textswrap_textsize"
+            android:layout_marginTop="@dimen/activity_set_textswrap_magintop"
+            android:layout_marginRight="@dimen/activity_set_textswrap_maginright"
+            android:layout_toLeftOf="@+id/iv_right"
+            android:textColor="#cccccc"
+            />
+
+        <ImageView
+            android:id="@+id/iv_right"
+            android:layout_width="wrap_content"
+            android:src="@drawable/right"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/activity_set_ivright_maginright"
+            android:layout_marginTop="@dimen/activity_set_ivright_magintop"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/activity_set_rl_magintop"
+        android:layout_height="@dimen/activity_set_llheight"
+        android:background="#ffffff">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_set_textswrap_maginleft"
+            android:layout_marginTop="@dimen/activity_set_textswrap_magintop"
+            android:text="修改密码"
+            android:textSize="@dimen/activity_set_textswrap_textsize" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/activity_set_ivright_maginright"
+            android:layout_marginTop="@dimen/activity_set_ivright_magintop"
+            android:src="@drawable/right" />
+
+    </RelativeLayout>
+
+
+
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="match_parent"
+        android:textSize="@dimen/activity_set_btn_textsize"
+        android:layout_marginLeft="@dimen/personal_detail_llmaginleft"
+        android:layout_marginRight="@dimen/personal_detail_llmaginright"
+        android:background="@drawable/exit_login_bg"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/activity_set_btn_magintop"
+        android:text="退出登录"
+        android:textColor="#FF1A1A"
+        android:layout_height="@dimen/activity_set_btn_height" />
+
+</LinearLayout>

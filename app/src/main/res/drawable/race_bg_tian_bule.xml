@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="oval">
+    <size android:height="@dimen/race_bg_tian_blue_size_height" android:width="@dimen/race_bg_tian_blue_size_width"/>
+    <solid android:color="#61B9FF"/>
+    <corners android:radius="61px"/>
+
+</shape>

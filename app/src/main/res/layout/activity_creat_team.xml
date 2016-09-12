@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE"
+    android:orientation="vertical"
+    tools:context="com.apsoft.scfb.ui.CreatTeamActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_creat_team_toptext_height"
+        android:background="#CE0000"
+        android:gravity="center"
+        android:text="创建球队"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/activity_creat_team_toptext_textsize" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/maginleft_13dp"
+                android:layout_marginRight="@dimen/maginright_13dp"
+                android:layout_height="@dimen/activity_creat_team_llteamname_height"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/activity_creat_team_llteamname_magintop"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/activity_creat_team_text_teamname_height"
+                    android:background="@drawable/create_teamname_bg"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/activity_creat_team_text_teamname_maginleft"
+                    android:text="球队名称"
+                    android:textColor="#333333"
+                    android:textSize="@dimen/activity_creat_team_text_teamname_textsize" />
+
+                <EditText
+                    android:id="@+id/ll_team_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/create_team_bg"
+                    android:hint="输入球队名称"
+                    android:paddingLeft="@dimen/activity_creat_team_edit_teamname_paddingleft"
+                    android:textColor="#CCCCCC"
+                    android:textSize="@dimen/activity_creat_team_edit_teamname_textsize" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/maginleft_13dp"
+                android:layout_marginRight="@dimen/maginright_13dp"
+                android:layout_height="@dimen/activity_creat_team_lladdress_height"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/activity_creat_team_lladdress_magintop"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/activity_creat_team_textaddress_height"
+                    android:background="@drawable/create_teamname_bg"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/activity_creat_team_textaddress_paddingleft"
+                    android:text="球队常住地"
+                    android:textColor="#333333"
+                    android:textSize="@dimen/activity_creat_team_textaddress_textsize" />
+
+                <EditText
+                    android:id="@+id/ll_team_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/create_team_bg"
+                    android:hint="选择球队注册的所在城市"
+                    android:paddingLeft="@dimen/activity_creat_team_editaddress_paddingleft"
+                    android:textColor="#CCCCCC"
+                    android:textSize="@dimen/activity_creat_team_editaddress_textsize" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/maginleft_13dp"
+                android:layout_marginRight="@dimen/maginright_13dp"
+                android:layout_height="@dimen/activity_creat_team_llintro_team_height"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/activity_creat_team_llintro_team_magintop"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/activity_creat_team_textintro_team_height"
+                    android:background="@drawable/create_teamname_bg"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/activity_creat_team_textintro_team_paddingleft"
+                    android:text="球队介绍"
+                    android:textColor="#333333"
+                    android:textSize="@dimen/activity_creat_team_textintro_team_paddingtop" />
+
+                <EditText
+                    android:id="@+id/ll_team_des"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/create_team_bg"
+                    android:gravity="left"
+                    android:hint="这是我的球队"
+                    android:paddingLeft="@dimen/activity_creat_team_editintro_team_paddingleft"
+                    android:paddingTop="@dimen/activity_creat_team_editintro_team_paddingtop"
+                    android:textColor="#CCCCCC"
+                    android:textSize="@dimen/activity_creat_team_editintro_team_textsize" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/maginleft_13dp"
+                android:layout_marginRight="@dimen/maginright_13dp"
+                android:layout_height="@dimen/activity_creat_team_llteamlogo_height"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/activity_creat_team_llteamlogo_magintop"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/activity_creat_team_textteamlogo_height"
+                    android:background="@drawable/create_teamname_bg"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/activity_creat_team_textteamlogo_paddingleft"
+                    android:text="球队logo"
+                    android:textColor="#333333"
+                    android:textSize="@dimen/activity_creat_team_textteamlogo_textsize" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/create_team_bg">
+
+                    <!--<ImageView-->
+                        <!--android:layout_width="@dimen/activity_creat_team_imgteamlogo_width"-->
+                        <!--android:layout_height="@dimen/activity_creat_team_imgteamlogo_height"-->
+                        <!--android:layout_marginLeft="@dimen/activity_creat_team_imgteamlogo_maginleft"-->
+                        <!--android:layout_marginTop="@dimen/activity_creat_team_imgteamlogo_magintop"-->
+                        <!--android:src="@drawable/add_images" />-->
+                    <GridView
+                        android:id="@+id/fenxiang_img"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/review_pic_height"
+                        android:layout_marginTop="@dimen/review_edit_lr_margin"
+                        android:numColumns="4"
+                        android:horizontalSpacing="@dimen/review_image_margin" >
+                    </GridView>
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_team_cloth"
+                android:layout_width="match_parent"
+                android:background="@drawable/activity_creat_team_path"
+                android:layout_marginLeft="@dimen/maginleft_13dp"
+                android:layout_marginRight="@dimen/maginright_13dp"
+                android:layout_marginTop="@dimen/magintop_18dp"
+                android:layout_height="@dimen/actiivty_create_team_rl_height">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="球衣颜色选择"
+                    android:textColor="#333333"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="11dp"
+                    android:textSize="@dimen/textsize_14"
+                    />
+                <ImageView
+                    android:id="@+id/iv_cloth_show"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="100dp"
+                    android:layout_centerVertical="true"
+                    />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/right"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="18dp"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_team_paths"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/actiivty_create_team_rl_height"
+                android:layout_marginLeft="@dimen/maginleft_13dp"
+                android:layout_marginRight="@dimen/maginright_13dp"
+                android:layout_marginTop="@dimen/magintop_16dp"
+                android:background="@drawable/activity_creat_team_path">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="11dp"
+                    android:gravity="center_vertical"
+                    android:text="球裤颜色选择"
+                    android:textColor="#333333"
+                    android:textSize="@dimen/textsize_14" />
+                <ImageView
+                    android:id="@+id/iv_path_show"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="104dp"
+                    android:layout_centerVertical="true"
+                    />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="18dp"
+                    android:src="@drawable/right" />
+            </RelativeLayout>
+
+
+            <Button
+                android:id="@+id/ll_create_team"
+                android:layout_marginLeft="@dimen/maginleft_13dp"
+                android:layout_marginRight="@dimen/maginright_13dp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_creat_team_btnteamlogo_height"
+                android:layout_marginTop="@dimen/activity_creat_team_btnteamlogo_magintop"
+                android:layout_gravity="center_horizontal"
+                android:text="创建球队"
+                android:background="@drawable/create_team_btn_bg"
+                android:layout_marginBottom="14dp"
+                android:textColor="#ffffff"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

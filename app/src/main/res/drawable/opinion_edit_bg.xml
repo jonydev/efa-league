@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<item>
+    <shape>
+        <corners android:radius="@dimen/opinion_edit_bg_corner_radius"/>
+        <solid android:color="#ffffff"/>
+        <size android:height="@dimen/opinion_edit_bg_size_height" android:width="@dimen/opinion_edit_bg_size_width"/>
+    </shape>
+</item>
+</selector>

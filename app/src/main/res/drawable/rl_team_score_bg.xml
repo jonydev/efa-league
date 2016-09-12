@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<item>
+    <shape>
+        <size android:width="@dimen/rl_team_score_width" android:height="@dimen/rl_team_score_height"/>
+        <corners android:radius="@dimen/rl_team_score_radius"/>
+        <solid android:color="#ffffff"/>
+    </shape>
+</item>
+</selector>

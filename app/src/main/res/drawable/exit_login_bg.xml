@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_enabled="false">
+        <shape android:shape="rectangle">
+            <solid android:color="#999999"/>
+            <corners android:radius="@dimen/exit_login_bg_corner_radius"/>
+            <size android:height="@dimen/activity_set_btn_height" android:width="@dimen/activity_set_btn_width"/>
+        </shape>
+    </item>
+
+<item>
+    <shape>
+        <solid android:color="#ffffff"/>
+        <corners android:radius="@dimen/exit_login_bg_corner_radius"/>
+        <size android:height="@dimen/activity_set_btn_height" android:width="@dimen/activity_set_btn_width"/>
+    </shape>
+</item>
+
+
+</selector>

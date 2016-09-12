@@ -1,0 +1,63 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.fragments.matches.DiscussionFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_discussion_detail_head_ll_top_height"
+        android:background="#357CB4"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/tv_item_discussion_which_race"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/item_discussion_detail_headmagintop"
+            android:text="第一轮视频锦集"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/textsize_15" />
+
+        <TextView
+            android:id="@+id/tv_item_discussion_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="2016-09-18"
+            android:visibility="gone"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/textsize_11" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_discussion_detail_head_rl_height">
+        <ImageView
+            android:id="@+id/iv_item_head_share"
+            android:layout_width="@dimen/item_discussion_detail_head_iv_headshare_width"
+            android:layout_height="@dimen/item_discussion_detail_head_iv_headshare_height"
+            android:layout_marginTop="@dimen/item_discussion_detail_head_iv_headshare_magintop"
+            android:layout_marginRight="@dimen/item_discussion_detail_head_iv_headshare_maginright"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/share"
+            />
+        <!--<SurfaceView-->
+            <!--android:id="@+id/sv"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="@dimen/item_discussion_detail_head_sv_height" />-->
+        <RelativeLayout
+            android:id="@+id/sv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></RelativeLayout>
+        <ImageView
+            android:id="@+id/iv_content"
+            android:layout_width="match_parent"
+            android:background="@color/black"
+            android:layout_height="@dimen/item_discussion_detail_head_sv_height" />
+    </RelativeLayout>
+
+</LinearLayout>

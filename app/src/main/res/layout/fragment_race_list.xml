@@ -1,0 +1,85 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    tools:context=".ui.fragments.matches.RaceListFragment">
+
+    <RadioGroup
+        android:id="@+id/rg_race_list"
+        android:layout_width="match_parent"
+        android:background="#c0c0c0"
+        android:layout_height="@dimen/match_fragment_rg_mathch_height"
+        android:layout_marginTop="@dimen/radiohead_racelist_magintop"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_race_score"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="积分"
+            android:textColor="@color/main_radio_change_text_color"
+            android:textSize="@dimen/match_fragment_rg_mathch_textsize" />
+        <TextView
+            android:layout_width="1dp"
+            android:background="#DBDBDB"
+            android:layout_gravity="center_vertical"
+            android:layout_height="30dp" />
+        <RadioButton
+            android:id="@+id/rb_get_score"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="进球"
+            android:textColor="@color/main_radio_change_text_color"
+            android:textSize="@dimen/match_fragment_rg_mathch_textsize" />
+        <TextView
+            android:layout_width="1dp"
+            android:background="#DBDBDB"
+            android:layout_gravity="center_vertical"
+            android:layout_height="30dp" />
+
+        <RadioButton
+            android:id="@+id/rb_help_score"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="助攻"
+            android:textColor="@color/main_radio_change_text_color"
+            android:textSize="@dimen/match_fragment_rg_mathch_textsize" />
+        <TextView
+            android:layout_width="1dp"
+            android:background="#DBDBDB"
+            android:layout_gravity="center_vertical"
+            android:layout_height="30dp" />
+        <RadioButton
+            android:id="@+id/rb_red_yellow_card"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="红黄牌"
+            android:textColor="@color/main_radio_change_text_color"
+            android:textSize="@dimen/match_fragment_rg_mathch_textsize" />
+
+    </RadioGroup>
+
+    <FrameLayout
+        android:id="@+id/fl_race_list"
+        android:layout_marginTop="@dimen/radiohead_racelist_magintop"
+        android:layout_below="@+id/rg_race_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout>
+
+
+</RelativeLayout>

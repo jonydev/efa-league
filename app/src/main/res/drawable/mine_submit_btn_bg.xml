@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <size android:height="@dimen/mine_submit_btn_bg_size_height" android:width="@dimen/mine_submit_btn_bg_size_width"/>
+    <corners android:radius="@dimen/mine_submit_btn_bg_corners_radius"/>
+    <solid android:color="#357CB4"/>
+</shape>

@@ -1,0 +1,138 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+
+   <!-- <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_top_bar"
+        android:layout_below="@+id/ll_top"
+        android:background="@color/backgroundsharewhite"
+        >
+
+
+        <TextView
+            android:id="@+id/selfname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-5dp"
+            android:layout_centerInParent="true"
+            android:text="首页"
+            android:textColor="@color/fontcolor"
+            android:textSize="@dimen/text_size_l" />
+
+    </RelativeLayout>-->
+
+    <LinearLayout
+        android:id="@+id/main_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_main_llbottom_height"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bottom_bar_normal_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+
+        <RelativeLayout
+            android:id="@+id/btn_container_conversation"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <Button
+                android:id="@+id/btn_conversation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#E0E0E0"
+                android:drawableTop="@drawable/home_bg_select"
+                android:onClick="onTabClicked"
+                android:paddingBottom="2dip"
+                android:paddingTop="7dip"
+                android:scaleType="matrix"
+                android:drawablePadding="-5dp"
+                android:text="@string/home"
+                android:textColor="@color/em_main_botton_text_color"
+                android:textSize="11sp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btn_container_race_list"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <Button
+                android:id="@+id/btn_race_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#E0E0E0"
+                android:drawableTop="@drawable/match_bg_selected"
+                android:onClick="onTabClicked"
+                android:paddingBottom="2dip"
+                android:scaleType="matrix"
+                android:text="赛事"
+                android:paddingTop="7dip"
+                android:drawablePadding="-5dp"
+                android:textColor="@color/em_main_botton_text_color"
+                android:textSize="11sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btn_container_address_list"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <Button
+                android:id="@+id/btn_address_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#E0E0E0"
+                android:drawableTop="@drawable/team_bg_selected"
+                android:onClick="onTabClicked"
+                android:paddingBottom="2dip"
+                android:scaleType="matrix"
+                android:text="@string/qiudui"
+                android:paddingTop="7dip"
+                android:drawablePadding="-5dp"
+                android:textColor="@color/em_main_botton_text_color"
+                android:textSize="11sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btn_container_setting"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <Button
+                android:id="@+id/btn_setting"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#E0E0E0"
+                android:drawableTop="@drawable/user_bg_selected"
+                android:onClick="onTabClicked"
+                android:paddingBottom="2dip"
+                android:scaleType="matrix"
+                android:text="@string/mine"
+                android:paddingTop="7dip"
+                android:drawablePadding="-5dp"
+                android:textColor="@color/em_main_botton_text_color"
+                android:textSize="11sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/main_bottom" >
+    </RelativeLayout>
+
+</RelativeLayout>

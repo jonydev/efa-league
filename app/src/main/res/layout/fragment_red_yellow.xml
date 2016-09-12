@@ -1,0 +1,93 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#eeeeee"
+    tools:context="com.apsoft.scfb.ui.fragments.matches.racelist.ScoreFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/frag_score_rltop_height"
+        android:background="#0066CC"
+        android:layout_gravity="center_horizontal"
+        >
+        <TextView
+            android:id="@+id/tv_turn_item_red_yellow"
+            android:layout_width="@dimen/discussion_submit_edit_height"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/content_textsize_12"
+            android:layout_marginLeft="@dimen/item_goal_bill_tvgoal_amginleft"
+            android:layout_centerVertical="true"
+            android:text="排名"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_toRightOf="@+id/tv_turn_item_red_yellow"
+            >
+            <TextView
+                android:id="@+id/tv_player_name_item_red_yellow"
+                android:layout_width="0dp"
+                android:layout_weight="1.5"
+                android:layout_height="wrap_content"
+                android:text="姓名"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/content_textsize_12"
+                />
+            <TextView
+                android:id="@+id/tv_name_item_red_yellow"
+                android:text="球队"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/content_textsize_12"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_red_item_red_yellow"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:layout_height="wrap_content"
+                android:text="红牌"
+                android:textSize="@dimen/content_textsize_12"
+                />
+            <TextView
+                android:id="@+id/tv_retain_yellow__item_red_yellow"
+                android:layout_width="0px"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:text="黄牌"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/content_textsize_12"
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:background="#EEEEEE"
+        android:layout_height="@dimen/item_expand_line"
+        />
+    <ListView
+        android:id="@+id/lv_score"
+        android:layout_width="match_parent"
+        android:scrollbars="none"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="match_parent">
+    </ListView>
+
+</LinearLayout>
+

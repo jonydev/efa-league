@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<item>
+    <shape>
+        <size android:width="@dimen/activity_team_detail_apply_jionto_width" android:height="@dimen/activity_team_detail_apply_jionto_height"/>
+        <corners android:radius="@dimen/activity_team_detail_apply_jionto_radius"/>
+        <solid android:color="#357CB4"/>
+    </shape>
+</item>
+</selector>

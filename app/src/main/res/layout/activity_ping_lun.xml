@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.apsoft.scfb.ui.PingLunActivity">
+    <TextView
+        android:id="@+id/tv_head"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/match_fragment_tv_head_height"
+        android:background="@color/text_head_backgoud_color"
+        android:gravity="center"
+        android:text="回复"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/head_textsize_17"/>
+
+    <TextView
+        android:id="@+id/tv_pinlun_all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_head"
+        android:layout_marginTop="10dp"
+        android:text="xxxxxxx"
+        />
+
+    <EditText
+        android:id="@+id/et_pinglun"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/edit_bg_pinlun"
+        android:layout_toLeftOf="@+id/btn_pinglun"
+        android:layout_height="30dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
+        />
+
+    <Button
+        android:id="@+id/btn_pinglun"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="评论"
+        android:onClick="click"
+        android:background="@null"
+        android:textColor="#333333"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="10dp"
+        />
+
+</RelativeLayout>

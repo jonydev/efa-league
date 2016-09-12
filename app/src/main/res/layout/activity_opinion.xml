@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="com.apsoft.scfb.ui.OpinionActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_opinion_text_top_height"
+        android:text="意见反馈"
+        android:textColor="#ffffff"
+        android:background="#CE0000"
+        android:textSize="@dimen/activity_opinion_text_top_textsize"
+        android:gravity="center"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="#eeeeee"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/et_advice"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="@dimen/personal_detail_llmaginleft"
+            android:layout_marginRight="@dimen/personal_detail_llmaginright"
+            android:layout_height="@dimen/activity_opinion_editext_height"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/opinion_edit_bg"
+            android:gravity="left"
+            android:layout_marginTop="@dimen/activity_opinion_magintop"
+            android:hint="请输入您的问题和意见，您留下的每个字都将永爱改善我们的软件"
+            android:textSize="@dimen/activity_opinion_editext_textsize"
+            android:paddingLeft="@dimen/activity_opinion_editext_text_paddingleft"
+            android:paddingTop="@dimen/activity_opinion_editext_text_paddingtop"
+            android:paddingRight="@dimen/activity_opinion_editext_text_paddingright"
+            android:textColor="#cccccc"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="@dimen/personal_detail_llmaginleft"
+            android:layout_marginRight="@dimen/personal_detail_llmaginright"
+            android:layout_marginTop="@dimen/activity_opinion_ll_putphoto_magintop"
+            android:orientation="vertical"
+            android:background="@drawable/push_photo_llbottom_bg"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/activity_opinion_ll_putphoto_height">
+            <TextView
+                android:layout_width="@dimen/activity_opinion_ll_putphoto_textwidth"
+                android:text="上传图片"
+                android:textColor="#333333"
+                android:paddingLeft="@dimen/activity_opinion_ll_putphoto_textsize"
+                android:paddingTop="@dimen/activity_opinion_ll_putphoto_textmagintop"
+                android:background="@drawable/push_photo_bg"
+                android:layout_height="@dimen/activity_opinion_ll_putphoto_textheight" />
+            <!--<ImageView-->
+                <!--android:id="@+id/iv_push_img"-->
+                <!--android:layout_width="@dimen/activity_opinion_ll_putphoto_imgwidth"-->
+                <!--android:src="@drawable/add_images"-->
+                <!--android:layout_marginLeft="@dimen/activity_opinion_ll_putphoto_imgmaginleft"-->
+                <!--android:layout_marginTop="@dimen/activity_opinion_ll_putphoto_imgmagintop"-->
+                <!--android:layout_height="@dimen/activity_opinion_ll_putphoto_imgheight" />-->
+
+            <GridView
+                android:id="@+id/fenxiang_img"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/review_pic_height"
+                android:layout_marginTop="@dimen/review_edit_lr_margin"
+                android:numColumns="4"
+                android:horizontalSpacing="@dimen/review_image_margin" >
+            </GridView>
+
+
+        </LinearLayout>
+        
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="@dimen/personal_detail_llmaginleft"
+            android:layout_marginRight="@dimen/personal_detail_llmaginright"
+            android:background="@drawable/mine_submit_btn_bg"
+            android:text="提交"
+            android:textSize="@dimen/activity_opinion_btn_submit_textsize"
+            android:layout_marginTop="@dimen/activity_opinion_btn_submitmagintop"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#FFFFFF"
+            android:layout_height="@dimen/activity_opinion_btn_submitheight" />
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<item>
+    <shape>
+        <size android:width="@dimen/compare_score_bg_width" android:height="@dimen/activity_add_to_team_btn_add_send_height"/>
+        <corners android:radius="@dimen/compare_score_bg_radius"/>
+        <solid android:color="#FF7E83"/>
+    </shape>
+</item>
+</selector>

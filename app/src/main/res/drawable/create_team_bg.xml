@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<item>
+    <shape>
+        <size android:width="@dimen/create_team_bg_size_width" android:height="@dimen/create_team_bg_size_height"/>
+        <corners android:bottomLeftRadius="@dimen/create_team_bg_corners_radius" android:bottomRightRadius="@dimen/create_team_bg_corners_radius"/>
+        <solid android:color="#ffffff"/>
+    </shape>
+</item>
+</selector>

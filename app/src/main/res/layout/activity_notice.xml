@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.apsoft.scfb.ui.NoticeActivity">
+    <RelativeLayout
+        android:id="@+id/rl_notice"
+        android:layout_width="match_parent"
+        android:background="#CE0000"
+        android:layout_height="@dimen/activity_notice_rl_top_height"
+        >
+
+        <TextView
+            android:id="@+id/tv_edit_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="27dp"
+            android:visibility="gone"
+            android:text="编辑"/>
+
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:visibility="gone"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/back"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="联赛新闻"
+            android:textSize="@dimen/head_textsize_17"
+            android:layout_centerInParent="true"
+            android:textColor="#ffffff"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_edit_right"
+            android:layout_width="50dp"
+            android:text="编辑"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:layout_height="50dp"/>
+    </RelativeLayout>
+
+
+
+   <FrameLayout
+       android:id="@+id/fl_contain_notice"
+       android:layout_below="@+id/rl_notice"
+       android:background="#eeeeee"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+   </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_notice_activity_bottom"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:background="#eeeeee"
+        android:layout_height="110px">
+        <Button
+            android:id="@+id/btn_readedAll"
+            android:layout_width="wrap_content"
+            android:text="全部已读"
+            android:background="#00ffffff"
+            android:textSize="18sp"
+            android:onClick="click"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:textColor="#b2b2b2"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btn_del"
+            android:layout_width="wrap_content"
+            android:text="删除"
+            android:onClick="click"
+            android:textSize="18sp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>

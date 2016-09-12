@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:id="@+id/ll_homefragHead"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="@dimen/home_fragent_head_top_bar_height"
+        android:background="#CE0000"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/ll_area_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="武汉"
+                android:textSize="@dimen/head_textsize_17"
+                android:gravity="center_vertical"
+                android:textColor="#ffffff"
+                android:layout_marginLeft="@dimen/home_fragent_head_text_area_maginleft"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="首页"
+                android:textSize="@dimen/head_textsize_17"
+                android:textColor="#FFFFFF"
+                android:layout_centerInParent="true"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:id="@+id/imgbtn_notice"
+                android:layout_width="wrap_content"
+                android:src="@drawable/notice"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/home_fragent_head_newsIamgeview_magin_right"
+                android:layout_height="match_parent"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <com.bigkoo.convenientbanner.ConvenientBanner
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/convenientBanner"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/home_fragent_head_ConvenientBanner_width"
+        app:canLoop="true"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll_main"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:background="#f0f0f0"
+        android:layout_below="@+id/convenientBanner"
+        android:layout_height="@dimen/home_fragent_head_llamin_height">
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:id="@+id/ll_join_team"
+            android:layout_width="@dimen/home_fragent_head_rl_addteam_width"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="#333333"
+                android:textSize="@dimen/home_fragent_head_text_addtoteam_textsize"
+                android:text="加入球队"/>
+
+        </RelativeLayout>
+        <TextView
+            android:layout_width="@dimen/home_fragent_head_text_addtoteam_textline"
+            android:background="#DBDBDB"
+            android:layout_gravity="center_vertical"
+            android:layout_height="30dp"/>
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:id="@+id/ll_join_match"
+            android:layout_width="@dimen/home_fragent_head_rl_addteam_width"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="#333333"
+                android:textSize="@dimen/home_fragent_head_text_addtoteam_textsize"
+                android:text="比赛报名"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

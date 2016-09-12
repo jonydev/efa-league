@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+	<string name="back">返回</string>
+	<string name="save">保存</string>
+	<string name="setting">设置</string>
+
+	<string name="about">关于</string>
+	<string name="login">登录</string>
+	<string name="register">注册</string>
+	<string name="finish">完成</string>
+	<string name="empty"></string>
+	<string name="success">成功</string>
+
+	<string name="resetpwd">忘记密码</string>
+	<string name="editmyselfinfo">编辑资料</string>
+
+	<string name="inputphone">输入用户名</string>
+	<string name="inputpwd">输入密码</string>
+	<string name="inputoldpwd">旧密码</string>
+	<string name="inputnewpwd">新密码</string>
+	<string name="inputsms">输入短信验证码</string>
+	<string name="getsms2">获取短信验证码</string>
+	<string name="getsms">发送信息</string>
+	<string name="smsleft">剩余%d秒</string>
+
+	<string name="userproxyprefix">提交注册表示您同意 《</string>
+	<string name="userproxycontent">用户手册</string>
+	<string name="userproxylink">》</string>
+
+	<string name="bindphone">绑定手机号</string>
+	<string name="button_send">发送短信</string>
+	<string name="button_save">保存</string>
+
+	<string name="modifyheadpic">修改头像</string>
+	<string name="modifypwd">修改密码</string>
+
+	<string name="inputpwdnotsame">输入密码不一致</string>
+
+	<string name="itemnick">昵称</string>
+	<string name="itemsex">性别</string>
+	<string name="itemcity">城市</string>
+
+	<string name="boy">男</string>
+	<string name="girl">女</string>
+
+	<string name="getsmsfailed">获取验证码失败</string>
+	<string name="repressexit">再按一次back键退出</string>
+
+	<string name="baseaddress">武汉</string>
+
+	<string name="personspecial">个人</string>
+
+	<string name="myinformation">我发表的信息</string>
+	<string name="myjoininformation">我参与的信息</string>
+	<string name="myfocus">我的关注</string>
+	<string name="myfriends">我的好友</string>
+	<string name="focusmanager">我的关注</string>
+
+
+	<string name="importphonebook">导入通信录</string>
+
+	<string name="importsuccess">导入成功</string>
+	<string name="importfail">导入失败</string>
+
+</resources>

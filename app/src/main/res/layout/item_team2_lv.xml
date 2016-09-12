@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="93dp"
+    android:background="#ffffff"
+    android:descendantFocusability="blocksDescendants"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/item_team2_rl_bg"
+        android:layout_height="@dimen/item_team2_rl_top_height">
+        <ImageView
+            android:id="@+id/iv_item_team2"
+            android:layout_width="@dimen/item_team2_iv_team_icon_width"
+            android:layout_height="@dimen/item_team2_iv_team_icon_height"
+            android:layout_marginTop="@dimen/item_team2_iv_team_icon_maginleft"
+            android:layout_marginLeft="@dimen/item_team2_iv_team_icon_magintop"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/tv_item_team2_teamname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textsize_15"
+            android:textColor="#333333"
+            android:layout_toRightOf="@+id/iv_item_team2"
+            android:layout_marginLeft="@dimen/item_team2_tv_team_name_maginleft"
+            android:layout_marginRight="@dimen/item_team2_tv_team_name_maginright"
+            android:layout_marginTop="@dimen/item_team2_tv_team_name_magintop"
+            />
+
+       <LinearLayout
+           android:id="@+id/ll_team_player"
+           android:layout_width="wrap_content"
+           android:orientation="horizontal"
+           android:layout_below="@+id/tv_item_team2_teamname"
+           android:layout_alignLeft="@+id/tv_item_team2_teamname"
+           android:layout_marginTop="@dimen/item_team2_rl_team_player_magintop"
+           android:layout_height="wrap_content">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="球员:"
+               android:textSize="@dimen/content_textsize_12"
+               android:textColor="#999999"
+               />
+
+           <TextView
+               android:id="@+id/ll_team_member_number"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textColor="#999999"
+               android:textSize="@dimen/content_textsize_12"
+               />
+
+       </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/ll_team_player"
+            android:layout_below="@+id/ll_team_player"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="胜率:"
+                android:textSize="@dimen/content_textsize_12"
+                android:textColor="#999999" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ll_team_v_rate"
+                android:textSize="@dimen/content_textsize_12"
+                android:textColor="#999999" />
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/ll_team_join_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/add_team_bg"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/item_team2_ll_team_join_layout_maginright"
+            android:layout_marginTop="@dimen/item_team2_ll_team_join_layout_magintop"
+            android:layout_marginBottom="@dimen/item_team2_ll_team_join_layout_maginbottom"
+            android:text="加入"
+            android:textSize="@dimen/textsize_15"
+            android:textColor="#357CB4"
+            android:focusable="false"
+            android:clickable="false"
+            >
+
+        </Button>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

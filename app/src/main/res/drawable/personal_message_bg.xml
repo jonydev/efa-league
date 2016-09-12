@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <corners android:topRightRadius="@dimen/personal_message_bg_corner_topRightRadius" android:topLeftRadius="@dimen/personal_message_bg_corner_topLeftRadius"/>
+            <size android:width="@dimen/personal_message_bg_size_width" android:height="@dimen/personal_message_bg_size_height"/>
+            <solid android:color="#E0DFDF"/>
+        </shape>
+    </item>
+</selector>

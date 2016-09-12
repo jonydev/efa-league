@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundwhite"
+    android:orientation="vertical" >
+    <RelativeLayout
+	        android:id="@+id/title"
+	        android:layout_width="match_parent"
+	        android:layout_height="@dimen/height_top_bar"
+	        android:background="@color/backgroundsharewhite" >
+	
+	        <LinearLayout
+	            android:layout_width="@dimen/height_back_icon_size"
+	            android:layout_height="@dimen/height_back_icon_size"
+	            android:onClick="back"
+	             >
+	
+	            <ImageView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="center_vertical"
+	                android:layout_marginLeft="9dp"
+	                android:scaleType="centerInside"
+	                android:src="@drawable/back" />
+	        </LinearLayout>
+	
+	        <TextView
+	            android:id="@+id/selfname"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerInParent="true"
+	            android:text="@string/bindphone"
+	            android:textColor="@color/fontcolor"
+	            android:textSize="@dimen/text_size_l" />
+	        
+	    </RelativeLayout>
+	    
+     <View
+	        android:layout_width="fill_parent"
+	        android:layout_height="1dp"
+	        android:background="@color/backgroundsep" />
+     
+<LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/sharemarginleft"
+ 		android:layout_marginTop="3dp"
+        android:layout_marginRight="@dimen/sharemarginleft"
+		android:orientation="vertical"
+		>
+		
+	    
+		<RelativeLayout
+             android:layout_width="match_parent"
+             android:layout_height="@dimen/setting_content_height">
+
+           <ImageView
+               android:id="@+id/iv_nickname"
+               android:layout_width="25dp"
+               android:layout_height="wrap_content"
+               android:layout_centerHorizontal="false"
+               android:layout_centerVertical="true"
+               android:layout_marginLeft="5dp"
+               android:layout_marginRight="5dp"
+               android:background="@drawable/phonebig" />
+                  
+	        <EditText
+	            android:id="@+id/phonenum"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:layout_centerVertical="true"
+	            android:layout_marginLeft="11dp"
+	            android:layout_toRightOf="@id/iv_nickname"
+	            android:background="@null"
+	            android:hint="@string/inputphone"
+	            android:inputType="phone"
+	            android:singleLine="true"
+	            android:textColor="@color/fontcolor"
+	            android:textColorHint="@color/fontcolorgray"
+	            android:textSize="@dimen/text_size_m" />
+
+
+        </RelativeLayout> 
+    
+		<View
+	        android:layout_width="fill_parent"
+	        android:layout_height="1dp"
+	        android:background="@color/backgroundsep" />
+		        
+		<RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="@dimen/setting_content_height"
+                >
+
+            <ImageView
+                android:id="@+id/iv_nickname2"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/smsbig" 
+                />
+  
+			<EditText
+			    android:id="@+id/password"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:layout_centerVertical="true"
+			    android:layout_marginLeft="11dip"
+			    android:layout_toRightOf="@id/iv_nickname2"
+			    android:background="@null"
+			    android:hint="@string/inputsms"
+			    android:inputType="textPassword"
+			    android:singleLine="true"
+			    android:textColor="@color/fontcolor"
+			    android:textColorHint="@color/fontcolorgray"
+			    android:textSize="@dimen/text_size_m" />
+   
+
+				<Button
+				    android:id="@+id/button1"
+				    android:layout_width="wrap_content"
+				    android:layout_height="@dimen/button_height_normal"
+				    android:layout_alignBaseline="@+id/password"
+				    android:layout_alignBottom="@+id/password"
+				    android:layout_alignParentRight="true"
+				    android:background="@drawable/btn_light"
+				    android:text="@string/button_send"
+				    android:textColor="@color/white"
+				    android:textSize="@dimen/text_size_xm" />
+
+		</RelativeLayout> 
+		<View
+	        android:layout_width="fill_parent"
+	        android:layout_height="1dp"
+	        android:background="@color/backgroundsep" />
+		</LinearLayout>
+		
+           
+ 	<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp" >
+        
+          <Button
+	        android:id="@+id/savebutton"
+	        android:layout_width="fill_parent"
+	        android:layout_height="@dimen/share_button_submit_height"
+	        android:layout_alignParentBottom="true"
+	        android:background="@color/backgroundsep"
+	        android:text="@string/save"
+	        android:textColor="@color/fontcolorlight"
+	        android:textSize="@dimen/text_size_mmm" />
+    </RelativeLayout>
+</LinearLayout>

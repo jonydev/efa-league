@@ -1,0 +1,44 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string name="app_name">一起赛</string>
+    <string name="schedule_name">赛程</string>
+    <string name="mine">个人</string>
+    <string name="home">首页</string>
+    <string name="qiudui">球队</string>
+
+    <string name="info">简介</string>
+    <string name="schedule">赛程</string>
+    <string name="billboard">榜单</string>
+    <string name="chat">讨论</string>
+
+
+    <string name="clearcache">清除缓存</string>
+    <string name="clearcachesuccess">清除缓存成功</string>
+
+    <string name="userinfoback">意见反馈</string>
+    <string name="userproxy">用户协议</string>
+    <string name="inputyoursuggest">请输入你的反馈意见</string>
+    <string name="inputyoursay">请输入你要说的</string>
+    <string name="aboutapp">关于</string>
+
+    <string name="select_city">选择城市</string>
+    <string name="hot_city">热门城市</string>
+    <string name="located_city">定位城市</string>
+    <string name="hint_search_box">请输入城市名或拼音</string>
+    <string name="nothing_found">没有搜索结果~</string>
+    <string name="locatingnow">定位</string>
+    <string name="locating">正在定位…</string>
+    <string name="located_failed">定位失败</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="permission">权限(permission)</string>
+    <string name="no_permissions">应用需要必要的运行权限</string>
+
+    <string name="settings">设置</string>
+    <string name="help">帮助</string>
+    <string name="string_help_text">当前应用缺少必要权限。\n\n请点击\"设置\"-\"权限\"-打开所需权限。\n\n最后点击两次后退按钮，即可返回。</string>
+    <string name="quit">退出</string>
+
+</resources>

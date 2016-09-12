@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.apsoft.scfb.ui.DetailNoticeActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_notice"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_detail_notice_rl_top_height"
+        android:background="#FF000A">
+
+        <TextView
+            android:id="@+id/tv_edit_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="27dp"
+            android:gravity="center"
+            android:text="编辑"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/activity_detail_notice_textitle_detail_magintop"
+            android:gravity="center"
+            android:text="正文"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/activity_detail_notice_text_top_textsize" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_notice"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_title_detail"
+                android:layout_width="@dimen/activity_detail_notice_textitle_detail_width"
+                android:layout_height="@dimen/activity_detail_notice_textitle_detail_height"
+                android:maxLines="2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/activity_detail_notice_textitle_detail_magintop"
+                android:text="中国银行  出资两百万赞助说什么什么足什么足什么足球队"
+                android:textSize="@dimen/activity_detail_notice_textitle_detail_textsize" />
+
+            <TextView
+                android:id="@+id/tv_time_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tv_title_detail"
+                android:layout_below="@+id/tv_title_detail"
+                android:layout_marginTop="@dimen/activity_detail_notice_textime_detail_magintop"
+                android:text="2016-8-1"
+                android:textColor="#CCCCCC"
+                android:textSize="@dimen/activity_detail_notice_textime_detail_textsize" />
+
+            <TextView
+                android:id="@+id/tv_league_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tv_time_detail"
+                android:layout_marginLeft="@dimen/activity_detail_notice_textleague_detail_maginleft"
+                android:layout_marginTop="@dimen/activity_detail_notice_textleague_detail_magintop"
+                android:layout_toRightOf="@+id/tv_time_detail"
+                android:text="企业足球联盟"
+                android:textColor="#CCCCCC"
+                android:textSize="@dimen/activity_detail_notice_textleague_detail_textsize" />
+
+            <ImageView
+                android:id="@+id/iv_detail"
+                android:layout_width="@dimen/activity_detail_notice_img_width"
+                android:layout_height="@dimen/activity_detail_notice_img_height"
+                android:layout_below="@+id/tv_league_detail"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/activity_detail_notice_img_magintop"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/tv_content_detail"
+                android:layout_width="@dimen/activity_detail_notice_img_width"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/iv_detail"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/activity_detail_notice_tvcontent_detail_magintop"
+                android:layout_marginBottom="@dimen/activity_detail_notice_tvcontent_detail_maginbottom"
+                android:text="    今年夏天的转会窗，AC米兰基本没有收获，究其原因就是中国财团迟迟没有完成对米兰的收购，而贝卢斯科尼则囊中羞涩，谈到米兰的收购时，阿巴特说道，“我们不能以此作为借口，我们还在等待消息，因为我们也不清楚贝卢斯科尼会不会出售米兰。加利亚尼也很难开展工作，因为他受到了限制。当然，如果俱乐部被出售，那么新的股东会明确他们的目标和规划。”
+     对于是否希望贝卢斯科尼留下的话题，阿巴特回应道，“这是当然的，是他和加利亚尼将我带到米兰的，或许到最后他会选择留在米兰。他有很多的资金，并且喜欢给我们制造惊喜。如果米兰被出售给中国财团，那也并非坏事，无论如何，我希望这个问题尽快得到解决。”
+  米兰在上个赛季排名联赛第七，无缘欧战，而阿巴特指出，“米兰不应该被遗弃，我们不能再度无缘欧冠，非常遗憾的是，上个赛季我们仅仅踢出了真实实力的60-70%，意甲也仅有两到三支球队比米兰强大，考虑到那不勒斯失去了伊瓜因，比我们强的球队更少了。”"
+                android:textColor="#666666"
+                android:textSize="@dimen/activity_detail_notice_tvcontent_detail_textsize" />
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

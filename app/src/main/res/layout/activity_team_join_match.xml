@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee"
+    tools:context="com.apsoft.scfb.ui.AddToTeamActivity">
+
+    <TextView
+        android:id="@+id/tv_addtoteam_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_add_to_team_tv_addtoteam_top_height"
+        android:background="#CE0000"
+        android:gravity="center"
+        android:text="加入球赛"
+        android:textColor="#ffffff" />
+
+    <EditText
+        android:id="@+id/et_intro_self"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/personal_detail_llmaginleft"
+        android:layout_marginRight="@dimen/personal_detail_llmaginright"
+        android:layout_height="@dimen/activity_add_to_team_et_intro_self_height"
+        android:layout_marginTop="@dimen/activity_add_to_team_et_intro_self_magintop"
+        android:textSize="@dimen/activity_add_to_team_et_intro_self_textsize"
+        android:paddingLeft="@dimen/activity_add_to_team_et_intro_self_paddingleft"
+        android:paddingTop="@dimen/activity_add_to_team_et_intro_self_paddingtop"
+        android:textColor="#cccccc"
+        android:background="@drawable/add_to_team_edit_bg"
+        android:layout_below="@+id/tv_addtoteam_top"
+        android:layout_centerHorizontal="true"
+        android:gravity="left"
+        android:hint="向赛程管理员介绍一下自己吧"
+        />
+
+    <Button
+        android:id="@+id/btn_add_send"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/personal_detail_llmaginleft"
+        android:layout_marginRight="@dimen/personal_detail_llmaginright"
+        android:layout_height="@dimen/activity_add_to_team_btn_add_send_height"
+        android:layout_marginBottom="@dimen/activity_add_to_team_btn_add_send_maginbottom"
+        android:text="发送"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/add_to_team_btnsend_bg"
+        android:textColor="#ffffff"
+        />
+
+</RelativeLayout>

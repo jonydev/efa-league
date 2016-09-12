@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <size android:height="@dimen/er_wei_bg_size_height" android:width="@dimen/er_wei_bg_size_width"/>
+    <corners android:radius="@dimen/er_wei_bg_corner_radius"/>
+    <solid android:color="#7A7A7A"/>
+
+</shape>

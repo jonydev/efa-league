@@ -1,0 +1,727 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context=".ui.fragments.matches.GameScheduleFragment">
+
+    <LinearLayout
+        android:id="@+id/ll_top_game"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#eeeeee"
+        android:orientation="vertical"
+        >
+
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swiperefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <ExpandableListView
+                android:id="@+id/el_fragGameSchedule"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#eeeeee"
+                android:layout_marginLeft="@dimen/match_fragment_gameschedule_ExpandableListView_maginleft"
+                android:layout_marginRight="@dimen/match_fragment_gameschedule_ExpandableListView_maginright"
+                android:layout_marginTop="@dimen/match_fragment_gameschedule_ExpandableListView_magintop"
+                android:divider="@null"
+                android:scrollbars="none"
+                android:fadingEdge="none"
+                >
+            </ExpandableListView>
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+
+    </LinearLayout>
+<!--
+    <ScrollView
+        android:id="@+id/sv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:visibility="gone"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_matchFrag"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp">
+
+                        <ImageView
+                            android:id="@+id/iv_left_teamhead_item_detail"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:src="@mipmap/ic_launcher"/>
+
+                        <TextView
+                            android:id="@+id/tv_left_teamname_item_detail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/iv_left_teamhead_item_detail"
+                            android:text="红郡"/>
+
+                        <TextView
+                            android:id="@+id/tv_right_teamname_item_detail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/iv_right_teamhead_item_detail"
+                            android:text="强势疾风"/>
+
+                        <ImageView
+                            android:id="@+id/iv_right_teamhead_item_detail"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:src="@mipmap/ic_launcher"/>
+
+
+                        <LinearLayout
+                            android:id="@+id/ll_center_detail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_compare_detail"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="2:1"
+                                android:textSize="18sp"
+                                android:textStyle="bold"/>
+                        </LinearLayout>
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_marginLeft="40dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="进球:"/>
+
+                                <TextView
+                                    android:id="@+id/tv_left_goal_name"
+                                    android:layout_width="45dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="right"
+                                    android:text="甘德丝  大逼"/>
+
+                                <TextView
+                                    android:id="@+id/tv_left_goal_score"
+                                    android:layout_width="20dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:text="20 65"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_marginLeft="40dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="助攻:"/>
+
+                                <TextView
+                                    android:id="@+id/tv_left_assit_name"
+                                    android:layout_width="45dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="right"
+                                    android:text="甘德丝  大逼"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_marginLeft="40dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="黄牌:"/>
+
+                                <TextView
+                                    android:id="@+id/tv_left_yellow_card_name"
+                                    android:layout_width="45dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="right"
+                                    android:text="甘德丝  大逼"/>
+
+                                <TextView
+                                    android:id="@+id/tv_left_yellow_card_num"
+                                    android:layout_width="20dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:text="20 65"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_marginLeft="40dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="红牌:"/>
+
+                                <TextView
+                                    android:id="@+id/tv_left_red_card_name"
+                                    android:layout_width="45dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="right"
+                                    android:text="甘德丝"/>
+
+                                <TextView
+                                    android:id="@+id/tv_left_red_card_num"
+                                    android:layout_width="20dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:text="20"/>
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_marginLeft="40dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="进球:"/>
+
+                                <TextView
+                                    android:id="@+id/tv_right_goal_name"
+                                    android:layout_width="45dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="right"
+                                    android:text="甘德丝"/>
+
+                                <TextView
+                                    android:id="@+id/tv_right_goal_score"
+                                    android:layout_width="20dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:text="20"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_marginLeft="40dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="助攻:"/>
+
+                                <TextView
+                                    android:id="@+id/tv_right_assit_name"
+                                    android:layout_width="45dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="right"
+                                    android:text="大逼"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_marginLeft="40dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="黄牌:"/>
+
+                                <TextView
+                                    android:id="@+id/tv_right_yellow_card_name"
+                                    android:layout_width="45dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="right"
+                                    android:text="甘德丝  大逼"/>
+
+                                <TextView
+                                    android:id="@+id/tv_right_yellow_card_num"
+                                    android:layout_width="20dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:text="20 65"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_marginLeft="40dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="红牌:"/>
+
+                                <TextView
+                                    android:id="@+id/tv_right_red_card_name"
+                                    android:layout_width="45dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="right"
+                                    android:text="甘德丝"/>
+
+                                <TextView
+                                    android:id="@+id/tv_right_red_card_num"
+                                    android:layout_width="20dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:text="20"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#cdcdcd"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="#eeeeee"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_left_teamname_item_detail"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="红郡"
+                        android:textColor="#514E9B"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.01"
+                        android:background="#CDCDCD"/>
+
+                    <Button
+                        android:id="@+id/btn_right_teamname_item_detail"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="强势疾风"
+                        android:textColor="#B0B0B0"/>
+                </LinearLayout>
+
+
+               <android.support.v7.widget.RecyclerView
+                   android:id="@+id/ll_match_change_people"
+                   android:padding="10dp"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+
+               </android.support.v7.widget.RecyclerView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#cdcdcd"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:background="#EEEEEE"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <LinearLayout
+                    android:id="@+id/ll_judgeResult"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:orientation="horizontal"
+                    >
+
+                    <TextView
+                        android:layout_width="130dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_height="match_parent"
+                        android:layout_toLeftOf="@+id/iv_back"
+                        android:gravity="center"
+                        android:text="评价本场裁判"
+                        android:drawableRight="@drawable/setenter"
+                        android:textColor="#ff0000"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="裁判组"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="主裁判:"/>
+
+                <TextView
+                    android:id="@+id/tv_primary_judge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="边裁:"/>
+
+                <TextView
+                    android:id="@+id/tv_second_judge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="第四官员："/>
+
+                <TextView
+                    android:id="@+id/tv_fourth_officious"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btn_join_schedule"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_team_detail_btn_add_to_team_height"
+                android:layout_marginLeft="@dimen/activity_team_detail_rl_team_detail_maginleft"
+                android:layout_marginRight="@dimen/activity_team_detail_rl_team_detail_maginright"
+                android:layout_marginBottom="@dimen/activity_team_detail_btn_add_to_team_maginbottom"
+                android:layout_marginTop="@dimen/activity_team_detail_btn_add_to_team_magintop"
+                android:text="我要参赛"
+                android:background="@drawable/activity_team_detail_apply_joininto"
+                android:layout_centerHorizontal="true"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/activity_team_detail_btn_add_to_team_textsize"
+                android:layout_below="@+id/ll_team_result"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+    <ScrollView
+        android:id="@+id/sl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:visibility="gone"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#eeeeee"
+                android:gravity="center"
+                android:text="评价本场裁判组"
+                android:textSize="20sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:background="#eeeeee"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="主裁判："
+                        />
+
+                    <TextView
+                        android:id="@+id/primary_judge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#eeeeee"
+                        android:gravity="left"
+                        />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#eeeeee"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="边裁:"
+                        />
+
+                    <TextView
+                        android:id="@+id/second_judge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#eeeeee"
+                        android:gravity="left"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#eeeeee"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="第四方官员:"
+                        />
+
+                    <TextView
+                        android:id="@+id/four_officious"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        />
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#747474"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="惩罚准则"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"/>
+
+                <RatingBar
+                    android:id="@+id/rating_rule"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:numStars="5"
+                    android:rating="5"
+                    android:stepSize="0.5"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#eeeeee"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#747474"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="执法公正"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"/>
+
+                <RatingBar
+                    android:id="@+id/rating_fair"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:numStars="5"
+                    android:rating="4"
+                    android:stepSize="0.5"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#eeeeee"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#747474"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="比赛掌控"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"/>
+
+                <RatingBar
+                    android:id="@+id/rating_control"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:numStars="5"
+                    android:rating="3"
+                    android:stepSize="0.5"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"
+                android:background="@drawable/edit_bg_result"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/et_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_above="@+id/tv_submit"
+                    android:background="@null"
+                    android:gravity="left"
+                    android:hint="申诉本轮判罚结果...."/>
+
+                <TextView
+                    android:id="@+id/tv_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:text="提交申诉报告"
+                    android:textColor="#ff0000"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>-->
+</LinearLayout>

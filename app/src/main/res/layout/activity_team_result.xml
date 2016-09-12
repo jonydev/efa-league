@@ -1,0 +1,101 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE"
+    tools:context="com.apsoft.scfb.ui.fragments.matches.MatchFragment">
+
+    <TextView
+        android:id="@+id/tv_head"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_team_result_tv_head_height"
+        android:background="#FF000A"
+        android:gravity="center"
+        android:text="球队战绩"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/activity_team_result_tv_head_textsize"/>
+
+
+
+    <RadioGroup
+        android:id="@+id/rg_teamResult"
+        android:layout_below="@+id/tv_head"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_team_result_rg_teamResult_height"
+        android:background="#E0E0E0"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_notStart"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="@dimen/activity_team_result_rg_teamResult_textsize"
+            android:background="#E0E0E0"
+            android:button="@null"
+            android:textColor="@color/main_radio_change_text_color"
+            android:gravity="center"
+            android:text="未开始"/>
+        <TextView
+            android:layout_width="1dp"
+            android:background="#6C6C6C"
+            android:layout_gravity="center_vertical"
+            android:layout_height="30dp" />
+        <RadioButton
+            android:id="@+id/rb_complete"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:textColor="@color/main_radio_change_text_color"
+            android:textSize="@dimen/activity_team_result_rg_teamResult_textsize"
+            android:background="#E0E0E0"
+            android:gravity="center"
+            android:text="已完成"/>
+
+        <TextView
+            android:layout_width="1dp"
+            android:background="#6C6C6C"
+            android:layout_gravity="center_vertical"
+            android:layout_height="30dp" />
+
+        <RadioButton
+            android:id="@+id/rb_toEvaluate"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="@dimen/activity_team_result_rg_teamResult_textsize"
+            android:background="#E0E0E0"
+            android:button="@null"
+            android:gravity="center"
+            android:textColor="@color/main_radio_change_text_color"
+            android:text="待评价"/>
+        <TextView
+            android:layout_width="1dp"
+            android:background="#6C6C6C"
+            android:layout_gravity="center_vertical"
+            android:layout_height="30dp" />
+        <RadioButton
+            android:id="@+id/rb_All"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="@dimen/activity_team_result_rg_teamResult_textsize"
+            android:button="@null"
+            android:textColor="@color/main_radio_change_text_color"
+            android:background="#E0E0E0"
+            android:gravity="center"
+            android:text="全部"/>
+
+    </RadioGroup>
+
+    <FrameLayout
+        android:id="@+id/fl_contain_teamResult"
+        android:layout_below="@+id/rg_teamResult"
+        android:background="#eeeeee"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    </FrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        >
+        <ImageView
+            android:id="@+id/iv_left_teamhead_item"
+            android:layout_width="60dp"
+            android:src="@mipmap/ic_launcher"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="17dp"
+            android:layout_marginBottom="24dp"
+            android:layout_height="60dp"/>
+
+        <TextView
+            android:id="@+id/tv_left_teamname_item"
+            android:layout_width="wrap_content"
+            android:text="红郡"
+            android:layout_marginLeft="9dp"
+            android:textSize="13sp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_left_teamhead_item"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/iv_left_teamflag_item"
+            android:src="@mipmap/ic_launcher"
+            android:layout_toLeftOf="@+id/ll_center"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"/>
+
+        <ImageView
+            android:id="@+id/iv_right_teamflag_item"
+            android:layout_width="20dp"
+            android:layout_toRightOf="@+id/ll_center"
+            android:layout_centerVertical="true"
+            android:layout_height="20dp"
+            android:layout_marginLeft="10dp"
+           android:src="@mipmap/ic_launcher"/>
+
+
+
+
+        <TextView
+            android:id="@+id/tv_right_teamname_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="13sp"
+            android:layout_marginRight="19dp"
+            android:layout_toLeftOf="@+id/iv_right_teamhead_item"
+            android:text="强势疾风"/>
+
+        <ImageView
+            android:id="@+id/iv_right_teamhead_item"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginRight="9dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/ic_launcher"/>
+
+
+        <LinearLayout
+            android:id="@+id/ll_center"
+            android:layout_width="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_time_child_item"
+                android:layout_width="wrap_content"
+                android:text="09:00"
+                android:textSize="12sp"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tv_place_child_item"
+                android:layout_width="wrap_content"
+                android:text="二号场"
+                android:textSize="12sp"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:background="#eeeeee"
+        android:layout_height="@dimen/item_expand_line" />
+
+</LinearLayout>

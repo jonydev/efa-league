@@ -1,0 +1,110 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#E0DFDF"
+              tools:context="com.apsoft.scfb.ui.fragments.matches.MatchFragment">
+
+    <TextView
+        android:id="@+id/tv_head"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/match_fragment_tv_head_height"
+        android:background="@color/text_head_backgoud_color"
+        android:gravity="center"
+        android:text="赛事详情"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/head_textsize_17"/>
+
+
+    <RadioGroup
+        android:id="@+id/rg_mathch"
+        android:layout_below="@+id/tv_head"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/match_fragment_rg_mathch_height"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_briefIntro"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="@dimen/title_textsize_14"
+            android:background="#E0E0E0"
+            android:button="@null"
+            android:textColor="@color/main_radio_change_text_color"
+            android:gravity="center"
+            android:text="简介"/>
+        <TextView
+            android:layout_width="1dp"
+            android:background="#c0c0c0"
+            android:layout_gravity="center_vertical"
+            android:layout_height="30dp" />
+        <RadioButton
+            android:id="@+id/rb_gameSchedule"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:textColor="@color/main_radio_change_text_color"
+            android:textSize="@dimen/title_textsize_14"
+            android:background="#E0E0E0"
+            android:gravity="center"
+            android:text="赛程"/>
+
+        <TextView
+            android:layout_width="1dp"
+            android:background="#c0c0c0"
+            android:layout_gravity="center_vertical"
+            android:layout_height="30dp" />
+        <RadioButton
+            android:id="@+id/rb_totalScore"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="@dimen/title_textsize_14"
+            android:background="#E0E0E0"
+            android:button="@null"
+            android:gravity="center"
+            android:textColor="@color/main_radio_change_text_color"
+            android:text="榜单"/>
+        <TextView
+            android:layout_width="1dp"
+            android:background="#c0c0c0"
+            android:layout_gravity="center_vertical"
+            android:layout_height="30dp" />
+        <RadioButton
+            android:id="@+id/rb_interation"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="@dimen/title_textsize_14"
+            android:button="@null"
+            android:textColor="@color/main_radio_change_text_color"
+            android:background="#E0E0E0"
+            android:gravity="center"
+            android:text="讨论区"/>
+
+    </RadioGroup>
+
+    <FrameLayout
+        android:id="@+id/fl_contain"
+        android:layout_below="@+id/rg_mathch"
+        android:background="#eeeeee"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    </FrameLayout>
+    <ImageButton
+        android:id="@+id/ivbtn_sign_up"
+        android:src="@drawable/baoming"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="@dimen/match_fragment_iv_sign_up_maginright"
+        android:layout_marginBottom="@dimen/match_fragment_iv_sign_up_maginbottom"
+        android:background="#00ffffff"
+        android:focusable="false"
+        android:clickable="false"
+        android:layout_width="@dimen/match_fragment_iv_sign_up_width"
+        android:layout_height="@dimen/match_fragment_iv_sign_up_height" />
+
+</RelativeLayout>

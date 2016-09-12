@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/tv_team_detail_teamName"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/match_fragment_tv_head_height"
+        android:background="#CE0000"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:text="球队赛程" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            >
+            <RelativeLayout
+                android:id="@+id/rl_top"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginLeft="@dimen/maginleft_13dp"
+                android:layout_marginRight="@dimen/maginright_13dp"
+                android:background="#ffffff">
+                <TextView
+                    android:id="@+id/tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="比赛报名"
+                    android:textColor="#333333"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="18sp"
+                    />
+                <TextView
+                    android:id="@+id/ll_scedule_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2016-9-02"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/tv"
+                    android:textColor="#333333"
+                    android:layout_gravity="center_horizontal"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/ll_center"
+                    >
+                    <ImageView
+                        android:id="@+id/iv_left_teamhead_application"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/team_icon" />
+                    <TextView
+                        android:id="@+id/tv_left_teamname_item"
+                        android:layout_width="wrap_content"
+                        android:text=""
+                        android:layout_marginRight="2dp"
+                        android:layout_marginLeft="2dp"
+                        android:gravity="center"
+                        android:layout_toRightOf="@+id/iv_left_teamhead_application"
+                        android:layout_toLeftOf="@+id/ll_left_app"
+                        android:layout_height="match_parent"/>
+                    <LinearLayout
+                        android:id="@+id/ll_left_app"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_centerVertical="true"
+                        >
+                        <ImageView
+                            android:id="@+id/iv_teamcloth_left_top"
+                            android:layout_width="@dimen/lvitem_team_notstart_iv_teamcloth_left_top_width"
+                            android:layout_height="@dimen/lvitem_team_notstart_iv_teamcloth_left_top_height"
+                            android:src="@drawable/qiudui_logo"
+                            />
+
+                        <ImageView
+                            android:id="@+id/iv_teamcloth_left_bottom"
+                            android:layout_width="@dimen/lvitem_team_notstart_iv_teamcloth_left_bottom_width"
+                            android:layout_height="@dimen/lvitem_team_notstart_iv_teamcloth_left_bottom_height"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@drawable/qiudui_logo" />
+
+                    </LinearLayout>
+
+
+
+
+                </RelativeLayout>
+
+
+
+
+                <LinearLayout
+                    android:id="@+id/ll_center"
+                    android:layout_width="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="VS"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/tv_time_child_application"
+                        android:layout_width="wrap_content"
+                        android:text="00:00"
+                        android:textColor="#333333"
+                        android:layout_height="wrap_content"/>
+                   <!-- <TextView
+                        android:id="@+id/tv_place_child_application"
+                        android:layout_width="wrap_content"
+                        android:text="一号场"
+                        android:layout_height="wrap_content"/>-->
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/tv_place_child_application"
+                    android:layout_width="wrap_content"
+                    android:text="一号场"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/ll_center"
+                    android:layout_height="wrap_content"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/ll_center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_right_teamhead_application"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/team_icon" />
+                    <TextView
+                        android:id="@+id/tv_right_teamname_application"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_toLeftOf="@+id/iv_right_teamhead_application"
+                        android:layout_toRightOf="@+id/ll_right_app"
+                        android:text=""/>
+                    <LinearLayout
+                        android:id="@+id/ll_right_app"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_centerVertical="true"
+
+                        >
+                        <ImageView
+                            android:id="@+id/iv_teamcloth_right_top"
+                            android:layout_width="@dimen/lvitem_team_notstart_iv_teamcloth_left_top_width"
+                            android:layout_height="@dimen/lvitem_team_notstart_iv_teamcloth_left_top_height"
+                            android:src="@drawable/qiudui_logo"
+                            />
+
+                        <ImageView
+                            android:id="@+id/iv_teamcloth_right_bottom"
+                            android:layout_width="@dimen/lvitem_team_notstart_iv_teamcloth_left_bottom_width"
+                            android:layout_height="@dimen/lvitem_team_notstart_iv_teamcloth_left_bottom_height"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@drawable/qiudui_logo" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_join_player"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/rl_top"
+                android:layout_above="@+id/tv_hori_line"
+                android:layout_marginTop="11dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/maginleft_13dp"
+                android:layout_marginRight="@dimen/maginright_13dp"
+                android:background="@drawable/activity_match_detail_bg"
+                >
+                <TextView
+                    android:id="@+id/tv_join_player"
+                    android:layout_width="match_parent"
+                    android:text="参赛人员"
+                    android:textColor="#333333"
+                    android:textSize="@dimen/textsize_14"
+                    android:background="@drawable/text_join_bg"
+                    android:layout_height="30dp"
+                    android:paddingLeft="11dp"
+                    android:gravity="center_vertical"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_below="@+id/tv_join_player"
+                    android:layout_toLeftOf="@+id/tv_line"
+                    >
+                    <TextView
+                        android:id="@+id/ll_join_match_status_left"
+                        android:layout_width="wrap_content"
+                        android:text="未报名"
+                        android:textColor="#333333"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="守门员"
+                        android:textColor="#333333"
+                        android:layout_marginTop="40dp"
+                        android:layout_gravity="center_horizontal"
+                        />
+
+                    <TextView
+                        android:id="@+id/ll_team_gk_name_left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:textColor="#333333"
+                        android:text="" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:background="#cccccc"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_height="1dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="后卫"
+                        android:textColor="#333333"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center_horizontal"
+                        />
+
+                    <TextView
+                        android:id="@+id/ll_team_guard_name_left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textColor="#333333"
+                        android:layout_gravity="center_horizontal"
+                        android:text="" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:background="#cccccc"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_height="1dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="中场"
+                        android:textColor="#333333"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center_horizontal"
+                        />
+
+                    <TextView
+                        android:id="@+id/ll_team_md_name_left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textColor="#333333"
+                        android:layout_gravity="center_horizontal"
+                        android:text="" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:background="#cccccc"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_height="1dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="前锋"
+                        android:textColor="#333333"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center_horizontal"
+                        />
+
+                    <TextView
+                        android:id="@+id/ll_team_fw_name_left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textColor="#333333"
+                        android:layout_gravity="center_horizontal"
+                        android:text="" />
+
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/tv_line"
+                    android:layout_width="1dp"
+                    android:layout_below="@+id/tv_join_player"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginBottom="80dp"
+                    android:background="#cccccc"
+                    android:layout_centerInParent="true"
+                    android:layout_height="match_parent" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_below="@+id/tv_join_player"
+                    android:layout_toRightOf="@+id/tv_line"
+                    >
+                    <TextView
+                        android:id="@+id/ll_join_match_status_right"
+                        android:layout_width="wrap_content"
+                        android:text="未报名"
+                        android:textColor="#333333"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="守门员"
+                        android:textColor="#333333"
+                        android:layout_marginTop="40dp"
+                        android:layout_gravity="center_horizontal"
+                        />
+
+                    <TextView
+                        android:id="@+id/ll_team_gk_name_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:textColor="#333333"
+                        android:text="" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:background="#cccccc"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_height="1dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="后卫"
+                        android:textColor="#333333"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center_horizontal"
+                        />
+
+                    <TextView
+                        android:id="@+id/ll_team_guard_name_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textColor="#333333"
+                        android:layout_gravity="center_horizontal"
+                        android:text="" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:background="#cccccc"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_height="1dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="中场"
+                        android:textColor="#333333"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center_horizontal"
+                        />
+
+                    <TextView
+                        android:id="@+id/ll_team_md_name_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textColor="#333333"
+                        android:layout_gravity="center_horizontal"
+                        android:text="" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:background="#cccccc"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_height="1dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="前锋"
+                        android:textColor="#333333"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center_horizontal"
+                        />
+
+                    <TextView
+                        android:id="@+id/ll_team_fw_name_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textColor="#333333"
+                        android:layout_gravity="center_horizontal"
+                        android:text="" />
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tv_hori_line"
+                android:layout_width="match_parent"
+                android:background="#cccccc"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_above="@+id/ll"
+                android:layout_height="1dp" />
+            <LinearLayout
+                android:id="@+id/ll"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_above="@+id/tv_line_bo"
+                android:layout_height="40dp">
+                <TextView
+                    android:id="@+id/ll_join_match"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="报名参赛"
+                    android:textColor="#333333"
+                    android:gravity="center"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.008"
+                    android:background="#cccccc"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="7dp"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:id="@+id/ll_stop_join_match"
+                    android:layout_width="0dp"
+                    android:textColor="#333333"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="本轮请假" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_line_bo"
+                android:layout_width="match_parent"
+                android:background="#cccccc"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_height="1dp"
+                android:layout_marginBottom="10dp"
+                android:layout_alignParentBottom="true"
+                />
+        </RelativeLayout>
+
+
+
+</LinearLayout>

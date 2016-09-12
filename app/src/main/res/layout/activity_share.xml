@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee"
+    android:orientation="vertical"
+    tools:context="com.apsoft.scfb.ui.ShareActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_share_text_top_height"
+        android:background="#CE0000"
+        android:gravity="center"
+        android:text="分享"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/activity_share_text_textsize" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_share_lldetail_height"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/activity_share_lldetail_magintop"
+                android:layout_marginRight="@dimen/activity_share_lldetail_maginright"
+                android:layout_marginLeft="@dimen/activity_share_lldetail_maginleft"
+                android:background="@drawable/erweima_bg"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/activity_share_text_recommend_magintop"
+                    android:text="向您推荐efa,足球联赛管理神器"
+                    android:textSize="@dimen/activity_share_text_recommend_textsize" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/activity_share_text_erwei_code_height"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/activity_share_text_erwei_code_magintop"
+                    android:layout_marginLeft="@dimen/activity_share_text_erwei_code_maginleft"
+                    android:layout_marginRight="@dimen/activity_share_text_erwei_code_maginright"
+                    android:background="@drawable/er_wei_bg"
+                    android:gravity="center"
+                    android:text="二维码位置"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/activity_share_text_erwei_code_textsize" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginRight="@dimen/activity_share_lldetail_maginright"
+                android:layout_marginLeft="@dimen/activity_share_lldetail_maginleft"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_share_llshare_to_magintop"
+                >
+
+                <TextView
+                    android:id="@+id/left_line"
+                    android:layout_width="match_parent"
+                    android:layout_toLeftOf="@+id/tv_share_to"
+                    android:layout_centerVertical="true"
+                    android:layout_height="@dimen/activity_share_textline_height"
+                    android:background="#CCCCCC" />
+
+                <TextView
+                    android:id="@+id/tv_share_to"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="分享到"
+                    android:textColor="#2C70BA"
+                    android:layout_marginLeft="@dimen/activity_share_textname_maginleft"
+                    android:layout_marginRight="@dimen/activity_share_textname_maginright"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="@dimen/activity_share_textname_textsize" />
+
+                <TextView
+                    android:id="@+id/right_line"
+                    android:layout_width="match_parent"
+                    android:layout_toRightOf="@+id/tv_share_to"
+                    android:layout_height="@dimen/activity_share_textline_height"
+                    android:layout_centerVertical="true"
+                    android:background="#CCCCCC" />
+            </RelativeLayout>
+
+         <!--   <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginRight="@dimen/activity_share_lldetail_maginright"
+                android:layout_marginLeft="@dimen/activity_share_lldetail_maginleft"
+                android:layout_height="@dimen/activity_share_ll_bottom_height"
+                android:layout_marginTop="@dimen/activity_share_ll_bottom_magintop"
+                android:layout_marginBottom="@dimen/activity_share_lldetail_maginbottom"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/share_qq"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/qq"
+                    android:gravity="center"
+                    android:textColor="#999999"
+                    android:textSize="@dimen/activity_share_qqtextsize"
+                    android:text="qq好友" />
+
+                <TextView
+                    android:id="@+id/share_wechat"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/wechat"
+                    android:gravity="center"
+                    android:textColor="#999999"
+                    android:textSize="@dimen/activity_share_qqtextsize"
+                    android:text="微信好友" />
+
+                <TextView
+                    android:id="@+id/share_friends_side"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/wechat_moment"
+                    android:gravity="center"
+                    android:textColor="#999999"
+                    android:textSize="@dimen/activity_share_qqtextsize"
+                    android:text="朋友圈" />
+
+                <TextView
+                    android:id="@+id/share_sina_weibo"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/sina_weibo"
+                    android:gravity="center"
+                    android:textColor="#999999"
+                    android:textSize="@dimen/activity_share_qqtextsize"
+                    android:text="新浪好友" />
+            </LinearLayout>-->
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,36 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.fragments.matches.DiscussionFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/discusison_ll_top_height"
+        android:background="#357CB4"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/tv_item_discussion_which_race"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/discussion_text_magintop"
+            android:layout_marginLeft="20dp"
+            android:text="第一轮视频锦集"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/textsize_15" />
+
+        <TextView
+            android:id="@+id/tv_item_discussion_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2016-09-18"
+            android:layout_marginLeft="20dp"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/textsize_11" />
+    </LinearLayout>
+
+
+
+</LinearLayout>

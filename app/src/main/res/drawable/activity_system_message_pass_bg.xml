@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<item>
+    <shape>
+        <size android:width="@dimen/activity_system_message_pass_size_width" android:height="@dimen/activity_system_message_pass_size_height"/>
+        <solid android:color="#357CB4"/>
+        <corners android:radius="@dimen/activity_system_message_pass_corners_radius"/>
+    </shape>
+</item>
+</selector>

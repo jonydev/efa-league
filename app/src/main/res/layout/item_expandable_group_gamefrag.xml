@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/rl_item_group_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/match_fragment_gameschedule_ExpandableListView_item_rlHeight"
+        android:background="@drawable/expandable_group_bg">
+
+        <TextView
+            android:id="@+id/tv_group_expandble"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/match_fragment_gameschedule_ExpandableListView_groupitem_text_maginleft"
+            android:layout_marginTop="@dimen/match_fragment_gameschedule_ExpandableListView_groupitem_text_magintop"
+            android:text="第一轮"
+            android:textColor="#333333"
+            android:textSize="@dimen/match_fragment_gameschedule_ExpandableListView_groupitem_textsize"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_time_schudule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_group_expandble"
+            android:layout_marginRight="@dimen/match_fragment_gameschedule_ExpandableListView_groupitem_texttime_maginright"
+            android:layout_toLeftOf="@+id/iv_sign"
+            android:text="2016/8/1"
+            android:textColor="#999999" />
+
+        <ImageView
+            android:id="@+id/iv_sign"
+            android:layout_width="@dimen/match_fragment_gameschedule_ExpandableListView_groupitem_imageview_width"
+            android:layout_height="@dimen/match_fragment_gameschedule_ExpandableListView_groupitem_imageview_height"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/match_fragment_gameschedule_ExpandableListView_groupitem_imageview_maginright"
+            android:layout_marginTop="@dimen/match_fragment_gameschedule_ExpandableListView_groupitem_imageview_magintop"
+            android:src="@drawable/already_game_down"
+            />
+
+        <ImageView
+            android:id="@+id/iv_sign_up"
+            android:layout_width="@dimen/match_fragment_gameschedule_ExpandableListView_groupitem_imageview_width"
+            android:layout_height="@dimen/match_fragment_gameschedule_ExpandableListView_groupitem_imageview_height"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/match_fragment_gameschedule_ExpandableListView_groupitem_imageview_maginright"
+            android:layout_marginTop="@dimen/match_fragment_gameschedule_ExpandableListView_groupitem_imageview_magintop"
+            android:src="@drawable/already_game_up"
+            android:visibility="invisible"/>
+       visibility="invisible"
+            />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

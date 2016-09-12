@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <corners android:radius="@dimen/item_notice_rl_bg_radius"/>
+            <size android:width="@dimen/item_notice_rl_bg_width" android:height="@dimen/item_notice_rl_bg_height"/>
+            <solid android:color="#ffffff"/>
+        </shape>
+    </item>
+</selector>

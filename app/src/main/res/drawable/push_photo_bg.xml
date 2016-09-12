@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<item>
+    <shape>
+        <size android:width="@dimen/activity_opinion_ll_putphoto_textwidth" android:height="@dimen/activity_opinion_ll_putphoto_textheight"/>
+        <corners android:topLeftRadius="@dimen/push_photo_bg_corner_topLeftRadius" android:topRightRadius="@dimen/push_photo_bg_corner_topRightRadius"/>
+        <solid android:color="#E0DFDF"/>
+    </shape>
+</item>
+</selector>

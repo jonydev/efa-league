@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/item_notice_rl_bg"
+        android:layout_height="@dimen/activity_item_notice_rl">
+        <ImageView
+            android:id="@+id/iv_itemNotice"
+            android:layout_width="@dimen/activity_item_notice_iv_width"
+            android:layout_marginTop="@dimen/activity_item_notice_iv_maginleft"
+            android:layout_marginLeft="@dimen/activity_item_notice_iv_magintop"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_launcher"
+            android:layout_height="@dimen/activity_item_notice_iv_height"/>
+
+        <TextView
+            android:id="@+id/tvContent_itemNotice"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="@dimen/activity_item_notice_textcontent_maginleft"
+            android:layout_marginRight="@dimen/activity_item_notice_textcontent_maginright"
+            android:textColor="#333333"
+            android:maxLines="2"
+            android:textSize="@dimen/textsize_15"
+            android:layout_alignTop="@+id/iv_itemNotice"
+            android:layout_toRightOf="@+id/iv_itemNotice"
+            android:text="中国银行  200200万站住200万站住2000万站住200万站住2000万站住万站住"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_time_notice"
+            android:text="2016/7/27"
+            android:textSize="@dimen/activity_item_notice_textime_textsize"
+            android:textColor="#cccccc"
+            android:layout_below="@+id/tvContent_itemNotice"
+            android:layout_alignLeft="@+id/tvContent_itemNotice"
+            android:layout_marginTop="@dimen/activity_item_notice_textime_magintop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+</RelativeLayout>

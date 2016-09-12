@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="#eeeeee"
+             tools:context=".ui.fragments.matches.DiscussionFragment">
+
+    <ListView
+        android:id="@+id/lv_discussion"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_bottom_discusssion"
+        android:scrollbars="none"
+        >
+    </ListView>
+
+    <ListView
+        android:id="@+id/lv_race_detail"
+        android:layout_above="@+id/rl_bottom_discusssion"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="7dp"
+        android:visibility="gone"
+        android:scrollbars="none">
+    </ListView>
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom_discusssion"
+        android:layout_width="match_parent"
+        android:background="#D8D8D8"
+        android:layout_alignParentBottom="true"
+        android:layout_height="@dimen/discussion_submit_rl_height"
+        android:visibility="gone"
+        >
+
+        <EditText
+            android:id="@+id/ll_edit_text"
+            android:layout_width="match_parent"
+            android:layout_toLeftOf="@+id/btn_discussion_send"
+            android:layout_height="@dimen/discussion_submit_edit_height"
+            android:hint="发表我的评论"
+            android:textColor="#AAAAAA"
+            android:textSize="@dimen/head_textsize_17"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/discussion_submit_edit_maingleft"
+            android:paddingLeft="@dimen/discussion_submit_edit_padding_left"
+            android:background="@drawable/edit_discussion_send_bg"
+            />
+        
+        <Button
+            android:id="@+id/btn_discussion_send"
+            android:layout_width="@dimen/activity_share_lldetail_width"
+            android:layout_height="@dimen/discussion_submit_edit_height"
+            android:text="发送"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/discussion_submit_edit_maingleft"
+            android:layout_marginRight="@dimen/discussion_submit_edit_maingleft"
+            android:textSize="@dimen/head_textsize_17"
+            android:background="@drawable/exit_login_bg"
+            android:textColor="#333333"
+            />
+        
+    </RelativeLayout>
+
+
+</RelativeLayout>
