@@ -86,7 +86,7 @@ public class TeamToEvaluateResultAdapter extends BaseAdapter {
         holder.tv_team_name_right.setText(data.get(position).getAway_team_name());
         holder.tv_left_score.setText(data.get(position).getHomescore());
         holder.tv_right_score.setText(data.get(position).getAwayscore());
-        String date = data.get(position).getDatetime().substring(0,9);
+        String date = data.get(position).getDatetime().substring(0,10);
         String detailTime = data.get(position).getDatetime().substring(12, 16);
         holder.tv_time.setText(date);
         holder.tv_detail_time.setText(detailTime);

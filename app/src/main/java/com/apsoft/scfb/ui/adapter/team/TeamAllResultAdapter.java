@@ -155,7 +155,7 @@ public class TeamAllResultAdapter extends BaseAdapter {
 
                     notStartViewHolder.tv_team_name_left.setText(data.get(position).getHome_team_name());
                     notStartViewHolder.tv_team_name_right.setText(data.get(position).getAway_team_name());
-                    String date = data.get(position).getDatetime().substring(0,9);
+                    String date = data.get(position).getDatetime().substring(0,10);
                     String detailTime = data.get(position).getDatetime().substring(12, 16);
                     notStartViewHolder.tv_time.setText(date);
                     notStartViewHolder.tv_detail_time.setText(detailTime);
@@ -187,7 +187,7 @@ public class TeamAllResultAdapter extends BaseAdapter {
                     compeleteViewHolder.tv_team_name_right.setText(data.get(position).getAway_team_name());
                     compeleteViewHolder.tv_left_score.setText(data.get(position).getHomescore());
                     compeleteViewHolder.tv_right_score.setText(data.get(position).getAwayscore());
-                    String dates = data.get(position).getDatetime().substring(0,9);
+                    String dates = data.get(position).getDatetime().substring(0,10);
                     String datesdetailtime = data.get(position).getDatetime().substring(12, 16);
                     compeleteViewHolder.tv_time.setText(dates);
                     compeleteViewHolder.tv_detail_time.setText(datesdetailtime);

@@ -1,18 +1,14 @@
 package com.apsoft.scfb.ui;
 
+import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONArray;
-import com.alibaba.fastjson.JSONObject;
 import com.apsoft.scfb.R;
-import com.apsoft.scfb.bean.MatchGameScheduleEntry;
 import com.apsoft.scfb.bean.TeamScheduleEntry;
 import com.apsoft.scfb.http.BaseCallback;
 import com.apsoft.scfb.http.NetHomeQuery;
@@ -194,7 +190,10 @@ public class TeamResultActivity extends AppCompatActivity implements RadioGroup.
         }
         for(int i=0; i<teamScheduleEntry.getData().size(); ++i){
             TeamScheduleEntry.GameSchedule schedule = teamScheduleEntry.getData().get(i);
-            if(schedule.getHomescore()!=null && schedule.getHomescore().length()>0){
+//            if(schedule.getHomescore()!=null && schedule.getHomescore().length()>0){
+//                finishSchedule.add(schedule);
+//            }
+            if(schedule.getFlag()!=null && schedule.getFlag().equalsIgnoreCase("1")){
                 finishSchedule.add(schedule);
             }
         }

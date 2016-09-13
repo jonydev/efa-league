@@ -7,20 +7,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ExpandableListView;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.ListView;
-import android.widget.RatingBar;
-import android.widget.ScrollView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.alibaba.fastjson.JSON;
@@ -29,19 +19,14 @@ import com.alibaba.fastjson.JSONObject;
 import com.apsoft.scfb.R;
 import com.apsoft.scfb.bean.MatchGameScheduleEntry;
 import com.apsoft.scfb.bean.MatchScheduleEntry;
-import com.apsoft.scfb.bean.PersonalInfoEntry;
 import com.apsoft.scfb.bean.ScheduleDetailEntry;
 import com.apsoft.scfb.http.BaseCallback;
 import com.apsoft.scfb.http.NetHomeQuery;
-import com.apsoft.scfb.http.NetSCFBLogin;
 import com.apsoft.scfb.localdata.User;
 import com.apsoft.scfb.ui.ApplicationTeamActivity;
-import com.apsoft.scfb.ui.LoginActivity;
 import com.apsoft.scfb.ui.MainActivity;
 import com.apsoft.scfb.ui.Match_Detail_Activity;
-import com.apsoft.scfb.ui.adapter.match.ChangePeopleAdapter;
 import com.apsoft.scfb.ui.adapter.match.ExpandableScheduleAdapter;
-import com.apsoft.scfb.utils.ImageLoader1;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
 
@@ -178,7 +163,7 @@ public class GameScheduleFragment extends Fragment implements SwipeRefreshLayout
 //    private String getFAMemberNameById(String memberId, boolean isHome){
 //        List<ScheduleDetailEntry.FirstAppearance> faMembers = null;
 //        if(isHome){
-//            faMembers = entry.getHome_bases();
+//            faMembers = entry.getHome_base();
 //        }else{
 //            faMembers = entry.getAway_base();
 //        }

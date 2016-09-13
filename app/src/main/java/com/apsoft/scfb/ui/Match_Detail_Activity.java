@@ -2,19 +2,13 @@ package com.apsoft.scfb.ui;
 
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ExpandableListView;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.RatingBar;
-import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,7 +19,6 @@ import com.apsoft.scfb.bean.MatchGameScheduleEntry;
 import com.apsoft.scfb.bean.ScheduleDetailEntry;
 import com.apsoft.scfb.http.BaseCallback;
 import com.apsoft.scfb.http.NetHomeQuery;
-import com.apsoft.scfb.localdata.User;
 import com.apsoft.scfb.ui.adapter.match.ChangePeopleAdapter;
 import com.apsoft.scfb.utils.ImageLoader1;
 import com.squareup.okhttp.Request;
@@ -145,9 +138,9 @@ public class Match_Detail_Activity extends AppCompatActivity {
                     entry.getAway_ex().get(i).setAlternate_name(getFAMemberNameById(entry.getAway_ex().get(i).getAlternate_id(), false));
                 }
                 String homeAppears = "";
-                if(entry.getHome_bases()!=null){
-                    for(int i=0; i<entry.getHome_bases().size(); ++i){
-                        ScheduleDetailEntry.FirstAppearance fa = entry.getHome_bases().get(i);
+                if(entry.getHome_base()!=null){
+                    for(int i = 0; i<entry.getHome_base().size(); ++i){
+                        ScheduleDetailEntry.FirstAppearance fa = entry.getHome_base().get(i);
                         homeAppears += fa.getMember_name();
                         homeAppears += "   ";
                         if( (i+1)%2 == 0){
@@ -274,7 +267,7 @@ public class Match_Detail_Activity extends AppCompatActivity {
     private String getFAMemberNameById(String memberId, boolean isHome){
         List<ScheduleDetailEntry.FirstAppearance> faMembers = null;
         if(isHome){
-            faMembers = entry.getHome_bases();
+            faMembers = entry.getHome_base();
         }else{
             faMembers = entry.getAway_base();
         }

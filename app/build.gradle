@@ -1,8 +1,8 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 22
-    buildToolsVersion "22.0.1"
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
 
     defaultConfig {
         applicationId "com.apsoft.scfb"
@@ -66,10 +66,10 @@ dependencies {
     //设计材料TableLaout
     compile fileTree(include: ['*.jar'], dir: 'libs')
     // 添加依赖
-    compile 'com.android.support:support-v4:22.3.0'
-    compile 'com.android.support:appcompat-v7:22.3.0'
-    compile 'com.android.support:design:22.2.1'
-    compile 'com.android.support:recyclerview-v7:22.2.1'
+    compile 'com.android.support:support-v4:23.3.0'
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:design:23.2.1'
+    compile 'com.android.support:recyclerview-v7:23.2.1'
     compile 'com.android.support:multidex:1.0.0'
     compile 'com.bigkoo:convenientbanner:2.0.5'
     compile 'cn.finalteam:okhttpfinal:2.0.7'
@@ -80,7 +80,6 @@ dependencies {
     compile 'com.google.code.gson:gson:2.4'
     compile 'org.simple:androideventbus:1.0.5.1'
     compile 'com.github.vipulasri:timelineview:1.0.0'
-    //    //黄油刀
     compile 'com.jakewharton:butterknife:8.2.1'
     apt 'com.jakewharton:butterknife-compiler:8.2.1'
     compile 'com.alibaba:fastjson:1.2.5'

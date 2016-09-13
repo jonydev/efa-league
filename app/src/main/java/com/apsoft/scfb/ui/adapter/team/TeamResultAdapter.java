@@ -106,7 +106,7 @@ public class TeamResultAdapter extends BaseAdapter {
 
         holder.tv_team_name_left.setText(schedule.getHome_team_name());
         holder.tv_team_name_right.setText(schedule.getAway_team_name());
-        String date = schedule.getDatetime().substring(0, 9);
+        String date = schedule.getDatetime().substring(0, 10);
         String detailTime = schedule.getDatetime().substring(12, 16);
         holder.tv_time.setText(date);
         holder.tv_detail_time.setText(detailTime);

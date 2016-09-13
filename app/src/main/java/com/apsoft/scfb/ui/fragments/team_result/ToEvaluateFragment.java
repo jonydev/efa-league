@@ -6,11 +6,11 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.apsoft.scfb.R;
 import com.apsoft.scfb.bean.TeamScheduleEntry;
-import com.apsoft.scfb.ui.adapter.team.TeamResultAdapter;
 import com.apsoft.scfb.ui.adapter.team.TeamToEvaluateResultAdapter;
 
 import java.util.List;
@@ -18,7 +18,7 @@ import java.util.List;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ToEvaluateFragment extends Fragment {
+public class ToEvaluateFragment extends Fragment implements AdapterView.OnItemClickListener {
 
 
     private View view;
@@ -45,6 +45,7 @@ public class ToEvaluateFragment extends Fragment {
         lv = (ListView) view.findViewById(R.id.ll_list_view_toevaluate);
         adapter = new TeamToEvaluateResultAdapter(getActivity());
         lv.setAdapter(adapter );
+        lv.setOnItemClickListener(this);
         if(cacheV != null){
             setData(cacheV);
         }
@@ -61,6 +62,13 @@ public class ToEvaluateFragment extends Fragment {
     }
 
 
-
-
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//        TeamScheduleEntry.GameSchedule schedule = (TeamScheduleEntry.GameSchedule) adapter.getItem(position);
+//
+//        Intent intent = new Intent(getContext(), Match_Detail_Activity.class);
+//        intent.putExtra("schedule_id", schedule.getId());
+//        intent.putExtra("schedule_json", JSON.toJSONString(schedule));
+//        startActivity(intent);
+    }
 }
