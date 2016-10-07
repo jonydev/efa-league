@@ -2,10 +2,14 @@ package com.apsoft.scfb.ui.fragments.matches;
 
 
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -35,12 +39,10 @@ import cn.finalteam.okhttpfinal.HttpRequest;
  */
 public class BriefIntroFragment extends Fragment {
 
-    private View view;
-    private TextView tvRaceBrief ;
-    private TextView tvRuleIntro;
-    private TextView tvJudgeIntro;
+    private static final String TAG = BriefIntroFragment.class.getSimpleName();
+    private WebView webView;
 
-    private String  office_id;
+//    private String  office_id;
 
     public BriefIntroFragment() {
 
@@ -55,105 +57,139 @@ public class BriefIntroFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        view=inflater.inflate(R.layout.fragment_brief_intro, container, false);
-        initview();
-        creatData();
+        View view=inflater.inflate(R.layout.fragment_brief_intro, container, false);
+//        initview();
+//        creatData();
         return view;
     }
 
-    private void creatData() {
-        queryData();
-
-    }
-
-    private void initview() {
-        tvRaceBrief= (TextView) view.findViewById(R.id.tv_race_brief);
-        tvRuleIntro= (TextView) view.findViewById(R.id.tv_rule_intro);
-        tvJudgeIntro= (TextView) view.findViewById(R.id.tv_judge_intro);
-    }
-
     @Override
-    public void setUserVisibleHint(boolean isVisibleToUser) {
-        super.setUserVisibleHint(isVisibleToUser);
-        if(isVisibleToUser && view!=null){
-            queryData();
-        }
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        webView = (WebView) view.findViewById(R.id.webview);
+        loadUrl();
     }
 
-    public void queryData(){
-        String officeIDSet = User.getInstance().getCurrentOffice();
-//        if(officeIDSet == null){
-//            officeIDSet = User.getInstance().getOffice_id();
-//        }
-        office_id = officeIDSet;
-        if(officeIDSet == null){
-            return;
-        }
-        NetHomeQuery.requestMatchInfo(officeIDSet, new BaseCallback<String>() {
+    public void forceRefresh() {
+        loadUrl();
+    }
+
+    private void loadUrl() {
+        webView.loadUrl("http://120.76.206.174:8080/Match/intro.html");
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.setWebViewClient(new WebViewClient(){
             @Override
-            public void onBeforeRequest(Request request) {
-
-            }
-
-            @Override
-            public void onFailure(Request request, Exception e) {
-
-            }
-
-            @Override
-            public void onResponse(Response response) {
-
-            }
-
-            @Override
-            public void onSuccess(Response response, String o) {
-                JSONObject jsonObject = JSON.parseObject(o);
-                jsonObject = jsonObject.getJSONObject("data");
-                String matchInfo = jsonObject.getString("match_info");
-                String ruleInfo = jsonObject.getString("rule_info");
-                String referInfo = jsonObject.getString("referee_info");
-                JSONArray jsonArray = jsonObject.getJSONArray("images");
-                if(jsonArray!=null) {
-                    List<String> images = new ArrayList<String>();
-                    for (int i = 0; i < jsonArray.size(); ++i) {
-                        images.add(jsonArray.getString(i));
-                    }
-
-                    ConvenientBanner convenientBanner = (ConvenientBanner) view.findViewById(R.id.convenientBanner);
-                    convenientBanner.setPages(
-                            new CBViewHolderCreator<LocalImageHolderView>() {
-                                @Override
-                                public LocalImageHolderView createHolder() {
-                                    LocalImageHolderView v = new LocalImageHolderView();
-                                    v.setScaleType(ImageView.ScaleType.CENTER);
-                                    return v;
-                                }
-                            }, images)
-                    //设置两个点图片作为翻页指示器，不设置则没有指示器，可以根据自己需求自行配合自己的指示器,不需要圆点指示器可用不设
-                    //                        .setPageIndicator(new int[]{R.drawable.ic_page_indicator, R.drawable.ic_page_indicator_focused})
-                    //设置指示器的方向
-                    //                        .setPageIndicatorAlign(ConvenientBanner.PageIndicatorAlign.CENTER_HORIZONTAL);
-                    ;
-                    convenientBanner.startTurning(2000);
-                }
-                tvRaceBrief.setText(matchInfo);
-                tvRuleIntro.setText(ruleInfo);
-                tvJudgeIntro.setText(referInfo);
-
-
-
-            }
-
-            @Override
-            public void onError(Response response, int code, Exception e) {
-
+            public void onPageFinished(WebView view, String url) {
+                String officeId = getOfficeId();
+                Log.i(TAG,officeId);
+                view.loadUrl("javascript:setOfficeId('" + officeId + "')");
             }
         });
     }
 
-    public void forceRefresh(){
-        if(User.getInstance().getCurrentOffice() != office_id){
-            queryData();
+    private String getOfficeId() {
+        String officeID = User.getInstance().getCurrentOffice();
+        if(null == officeID) {
+            return User.getInstance().getOffice_id();
         }
+        return officeID;
     }
+
+    
+
+    //
+//    private void creatData() {
+//        queryData();
+//
+//    }
+//
+//    private void initview() {
+//        tvRaceBrief= (TextView) view.findViewById(R.id.tv_race_brief);
+//        tvRuleIntro= (TextView) view.findViewById(R.id.tv_rule_intro);
+//        tvJudgeIntro= (TextView) view.findViewById(R.id.tv_judge_intro);
+//    }
+//
+//    @Override
+//    public void setUserVisibleHint(boolean isVisibleToUser) {
+//        super.setUserVisibleHint(isVisibleToUser);
+//        if(isVisibleToUser && view!=null){
+//            queryData();
+//        }
+//    }
+//
+//    public void queryData(){
+//        String officeIDSet = User.getInstance().getCurrentOffice();
+////        if(officeIDSet == null){
+////            officeIDSet = User.getInstance().getOffice_id();
+////        }
+//        office_id = officeIDSet;
+//        if(officeIDSet == null){
+//            return;
+//        }
+//        NetHomeQuery.requestMatchInfo(officeIDSet, new BaseCallback<String>() {
+//            @Override
+//            public void onBeforeRequest(Request request) {
+//
+//            }
+//
+//            @Override
+//            public void onFailure(Request request, Exception e) {
+//
+//            }
+//
+//            @Override
+//            public void onResponse(Response response) {
+//
+//            }
+//
+//            @Override
+//            public void onSuccess(Response response, String o) {
+//                JSONObject jsonObject = JSON.parseObject(o);
+//                jsonObject = jsonObject.getJSONObject("data");
+//                String matchInfo = jsonObject.getString("match_info");
+//                String ruleInfo = jsonObject.getString("rule_info");
+//                String referInfo = jsonObject.getString("referee_info");
+//                JSONArray jsonArray = jsonObject.getJSONArray("images");
+//                if(jsonArray!=null) {
+//                    List<String> images = new ArrayList<String>();
+//                    for (int i = 0; i < jsonArray.size(); ++i) {
+//                        images.add(jsonArray.getString(i));
+//                    }
+//
+//                    ConvenientBanner convenientBanner = (ConvenientBanner) view.findViewById(R.id.convenientBanner);
+//                    convenientBanner.setPages(
+//                            new CBViewHolderCreator<LocalImageHolderView>() {
+//                                @Override
+//                                public LocalImageHolderView createHolder() {
+//                                    LocalImageHolderView v = new LocalImageHolderView();
+//                                    v.setScaleType(ImageView.ScaleType.CENTER);
+//                                    return v;
+//                                }
+//                            }, images)
+//                    //设置两个点图片作为翻页指示器，不设置则没有指示器，可以根据自己需求自行配合自己的指示器,不需要圆点指示器可用不设
+//                    //                        .setPageIndicator(new int[]{R.drawable.ic_page_indicator, R.drawable.ic_page_indicator_focused})
+//                    //设置指示器的方向
+//                    //                        .setPageIndicatorAlign(ConvenientBanner.PageIndicatorAlign.CENTER_HORIZONTAL);
+//                    ;
+//                    convenientBanner.startTurning(2000);
+//                }
+//                tvRaceBrief.setText(matchInfo);
+//                tvRuleIntro.setText(ruleInfo);
+//                tvJudgeIntro.setText(referInfo);
+//
+//
+//
+//            }
+//
+//            @Override
+//            public void onError(Response response, int code, Exception e) {
+//
+//            }
+//        });
+//    }
+//
+//    public void forceRefresh(){
+//        if(User.getInstance().getCurrentOffice() != office_id){
+//            queryData();
+//        }
+//    }
 }

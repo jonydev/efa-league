@@ -138,9 +138,9 @@ public class Match_Detail_Activity extends AppCompatActivity {
                     entry.getAway_ex().get(i).setAlternate_name(getFAMemberNameById(entry.getAway_ex().get(i).getAlternate_id(), false));
                 }
                 String homeAppears = "";
-                if(entry.getHome_base()!=null){
-                    for(int i = 0; i<entry.getHome_base().size(); ++i){
-                        ScheduleDetailEntry.FirstAppearance fa = entry.getHome_base().get(i);
+                if(entry.getHome_bases()!=null){
+                    for(int i = 0; i<entry.getHome_bases().size(); ++i){
+                        ScheduleDetailEntry.FirstAppearance fa = entry.getHome_bases().get(i);
                         homeAppears += fa.getMember_name();
                         homeAppears += "   ";
                         if( (i+1)%2 == 0){
@@ -267,7 +267,7 @@ public class Match_Detail_Activity extends AppCompatActivity {
     private String getFAMemberNameById(String memberId, boolean isHome){
         List<ScheduleDetailEntry.FirstAppearance> faMembers = null;
         if(isHome){
-            faMembers = entry.getHome_base();
+            faMembers = entry.getHome_bases();
         }else{
             faMembers = entry.getAway_base();
         }

@@ -289,7 +289,7 @@ public class MatchFragment extends Fragment implements View.OnClickListener{
     public boolean onBackPressed(){
         if(currentShowFragment != null){
             if(currentShowFragment instanceof GameScheduleFragment){
-//                return ((GameScheduleFragment) currentShowFragment).onBackPressed();
+                return ((GameScheduleFragment) currentShowFragment).onBackPressed();
             }else if (currentShowFragment instanceof DiscussionFragment){
                 return ((DiscussionFragment) currentShowFragment).onBackPressed();
             }
