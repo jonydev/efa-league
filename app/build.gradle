@@ -8,8 +8,8 @@ android {
         applicationId "com.apsoft.scfb"
         minSdkVersion 18
         targetSdkVersion 22
-        versionCode 101
-        versionName "1.1"
+        versionCode 2101
+        versionName "2.1.1"
         multiDexEnabled true
     }
 
