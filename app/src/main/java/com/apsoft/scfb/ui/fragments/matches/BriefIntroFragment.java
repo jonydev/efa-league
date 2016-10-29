@@ -54,10 +54,11 @@ public class BriefIntroFragment extends Fragment {
         fragment.setArguments(args);
         return fragment;
     }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view=inflater.inflate(R.layout.fragment_brief_intro, container, false);
+        View view = inflater.inflate(R.layout.fragment_brief_intro, container, false);
 //        initview();
 //        creatData();
         return view;
@@ -76,25 +77,28 @@ public class BriefIntroFragment extends Fragment {
     private void loadUrl() {
         webView.loadUrl("http://120.76.206.174:8080/Match/intro.html");
         webView.getSettings().setJavaScriptEnabled(true);
-        webView.setWebViewClient(new WebViewClient(){
+        webView.setWebViewClient(new WebViewClient() {
             @Override
             public void onPageFinished(WebView view, String url) {
-                String officeId = getOfficeId();
-                Log.i(TAG,officeId);
-                view.loadUrl("javascript:setOfficeId('" + officeId + "')");
+                try {
+                    String officeId = getOfficeId();
+                    Log.i(TAG, officeId);
+                    view.loadUrl("javascript:setOfficeId('" + officeId + "')");
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
         });
     }
 
     private String getOfficeId() {
         String officeID = User.getInstance().getCurrentOffice();
-        if(null == officeID) {
+        if (null == officeID) {
             return User.getInstance().getOffice_id();
         }
         return officeID;
     }
 
-    
 
     //
 //    private void creatData() {

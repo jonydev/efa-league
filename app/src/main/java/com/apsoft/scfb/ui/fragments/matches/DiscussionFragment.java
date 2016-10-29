@@ -5,9 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
-import android.view.SurfaceView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -17,17 +15,14 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.anywhere.utils.ToastUtils;
 import com.apsoft.scfb.R;
-import com.apsoft.scfb.bean.DiscusisonEntry;
 import com.apsoft.scfb.bean.DiscussionDetailEntry;
 import com.apsoft.scfb.bean.DiscussionReviewEntry;
-import com.apsoft.scfb.bean.PinlunEntry;
 import com.apsoft.scfb.http.BaseCallback;
 import com.apsoft.scfb.http.NetHomeQuery;
 import com.apsoft.scfb.localdata.User;
@@ -36,11 +31,8 @@ import com.apsoft.scfb.ui.MainActivity;
 import com.apsoft.scfb.ui.adapter.match.DiscussionAdapter;
 import com.apsoft.scfb.ui.adapter.match.DiscussionDetailAdapter;
 import com.apsoft.scfb.utils.ImageLoader1;
-import com.apsoft.scfb.utils.MediaPlayHelper;
-import com.apsoft.scfb.utils.YoukuPlayHelper;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
-import com.squareup.okhttp.internal.framed.FrameReader;
 
 import org.simple.eventbus.EventBus;
 import org.simple.eventbus.Subscriber;
@@ -70,7 +62,6 @@ public class DiscussionFragment extends Fragment {
 //    SurfaceView surfaceView;
 
     RelativeLayout youkuLayoutBase;
-    YoukuPlayHelper youkuPlayHelper;
 
     ImageView imageView;
     Handler mHandler = new Handler();
@@ -243,8 +234,6 @@ public class DiscussionFragment extends Fragment {
 
         //初始化优酷播放帮助类
         youkuLayoutBase = (RelativeLayout) detailHeadView.findViewById(R.id.sv);
-        youkuPlayHelper = new YoukuPlayHelper();
-        youkuPlayHelper.initView(getActivity(), youkuLayoutBase);
     }
 
     /**
@@ -389,11 +378,9 @@ public class DiscussionFragment extends Fragment {
             //mediaPlayHelper.setUrl(entry.getVideo());//entry.getVideo());
             //mediaPlayHelper.play();
 //            youkuPlayHelper.play("576269e00cf2dac1a330f92a");//(entry.getVideo());
-            youkuPlayHelper.play(entry.getVideo());
 
         }else{
             //mediaPlayHelper.stop();
-            youkuPlayHelper.stop();
             imageView.setVisibility(View.VISIBLE);
 //            surfaceView.setVisibility(View.INVISIBLE);
             ImageLoader1.getInstance().displayImage(getActivity(), entry.getPhoto(), imageView);
@@ -415,7 +402,6 @@ public class DiscussionFragment extends Fragment {
             lv.setVisibility(View.VISIBLE);
             chatLayout.setVisibility(View.GONE);
             //mediaPlayHelper.stop();
-            youkuPlayHelper.stop();
             return true;
         }
         return false;
@@ -425,7 +411,6 @@ public class DiscussionFragment extends Fragment {
     public void onDestroy() {
         super.onDestroy();
         EventBus.getDefault().unregister(getActivity());
-        youkuPlayHelper.destoryPlayer();
     }
 
 
